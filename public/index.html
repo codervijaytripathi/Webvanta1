@@ -11,9 +11,14 @@
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <title>GoodWeb | Premium Web Development & AI Solutions Agency</title>
+
+     <!--  custom CSS files -->
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
+        
     {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
@@ -2139,6 +2144,32 @@
             renderTestimonials();
             renderBlog();
         });
+
+
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/footer.js"></script>
+    
+    <!-- Header load karne wala script (jo pehle likha tha) -->
+    <script>
+        // Header load karo
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                // Ab header load ho chuka hai, yahan agar header.js mein koi initialization function ho to call karo
+                if (typeof initHeader === 'function') initHeader();
+            })
+            .catch(error => console.error('Header load error:', error));
+
+        // Footer load karo
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+                if (typeof initFooter === 'function') initFooter();
+            })
+            .catch(error => console.error('Footer load error:', error));
+ 
     </script>
 </body>
 </html>
