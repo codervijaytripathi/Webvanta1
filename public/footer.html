@@ -1,255 +1,143 @@
+<footer class="relative bg-slate-950 pt-20 pb-10 overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
+    
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-cyan-900/10 blur-[100px] pointer-events-none"></div>
 
-
-
-    <!-- Spacer to push footer down (demo purposes) -->
-    <div class="min-h-[50vh] flex items-center justify-center bg-slate-100">
-        <p class="text-slate-400 font-medium">Page Content Area</p>
-    </div>
-
-    <!-- ============================================
-         FOOTER COMPONENT
-         ============================================ -->
-    <footer class="bg-slate-950 border-t border-slate-800 pt-20 pb-10 relative">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             
-            <!-- Main Footer Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="space-y-6">
+                <div class="flex items-center gap-3 group cursor-pointer">
+                    <div class="relative w-10 h-10 flex items-center justify-center">
+                        <svg viewBox="0 0 100 100" class="w-10 h-10 transition-transform duration-500 group-hover:scale-110" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="footerGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#22d3ee"/>
+                                    <stop offset="100%" stop-color="#4f46e5"/>
+                                </linearGradient>
+                            </defs>
+                            <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" fill="none" stroke="url(#footerGlow)" stroke-width="1.5" opacity="0.4" class="group-hover:opacity-100 transition-opacity duration-500"/>
+                            <path d="M15,35 L35,75 L50,45 L65,75 L85,35" fill="none" stroke="url(#footerGlow)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M35,25 L50,60 L65,25" fill="none" stroke="#e0e7ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-black text-2xl text-white tracking-tight">
+                            Web<span class="bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent">Vanta</span>
+                        </h3>
+                        <div class="flex items-center gap-1.5 mt-0.5">
+                            <div class="w-1 h-1 rounded-full bg-cyan-500 animate-pulse"></div>
+                            <p class="text-[8px] text-slate-400 font-bold uppercase tracking-[0.3em]">Intelligence Agency</p>
+                        </div>
+                    </div>
+                </div>
                 
-                <!-- Brand Column -->
-                <div class="space-y-6">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-nexus-blue font-bold shadow-lg">
-                            <i class="fas fa-brain text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-display font-black text-2xl text-white">GoodWeb</h3>
-                            <p class="text-[10px] text-nexus-cyan font-bold uppercase tracking-widest">Web + AI Agency</p>
-                        </div>
-                    </div>
-                    
-                    <p class="text-sm text-slate-400 font-medium leading-relaxed">
-                        Building smart websites and intelligent digital systems for businesses worldwide. Transform your digital presence with cutting-edge technology.
-                    </p>
-                    
-                    <!-- Social Links -->
-                    <div class="flex gap-3">
-                        <a href="#" onclick="showToast('Coming Soon', 'Twitter page launching soon')" class="social-icon w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:text-white hover:bg-nexus-blue">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" onclick="showToast('Coming Soon', 'LinkedIn page launching soon')" class="social-icon w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:text-white hover:bg-nexus-blue">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" onclick="showToast('Coming Soon', 'Instagram page launching soon')" class="social-icon w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:text-white hover:bg-nexus-blue">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://wa.me/917879598076" target="_blank" class="social-icon w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:text-white hover:bg-green-500">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
+                <p class="text-sm text-slate-400 font-medium leading-relaxed pr-4">
+                    Building smart websites and intelligent digital systems for businesses worldwide.
+                </p>
+                
+                <div class="flex flex-wrap gap-3 mt-6">
+    
+    <a href="YAHAN_LINK_DAALO" target="_blank" class="w-10 h-10 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-[#E1306C] hover:border-[#E1306C]/50 hover:shadow-[0_0_15px_rgba(225,48,108,0.2)] transition-all duration-300" title="Instagram">
+        <i class="fab fa-instagram text-lg"></i>
+    </a>
+    
+    <a href="YAHAN_LINK_DAALO" target="_blank" class="w-10 h-10 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-[#25D366] hover:border-[#25D366]/50 hover:shadow-[0_0_15px_rgba(37,211,102,0.2)] transition-all duration-300" title="WhatsApp">
+        <i class="fab fa-whatsapp text-lg"></i>
+    </a>
 
-                <!-- Services Column -->
-                <div>
-                    <h4 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
-                        <i class="fas fa-cogs text-nexus-blue text-sm"></i> Services
-                    </h4>
-                    <ul class="space-y-3 text-sm font-medium text-slate-400">
-                        <li>
-                            <a href="#services" onclick="openLeadModal('Business Website')" class="footer-link hover:text-nexus-blue transition-colors">
-                                Business Websites
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#services" onclick="openLeadModal('E-commerce')" class="footer-link hover:text-nexus-blue transition-colors">
-                                E-commerce Solutions
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#services" onclick="openLeadModal('AI Chatbot')" class="footer-link hover:text-nexus-blue transition-colors">
-                                AI Chatbots
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#services" onclick="openLeadModal('Web Application')" class="footer-link hover:text-nexus-blue transition-colors">
-                                Web Applications
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#services" onclick="openLeadModal('Automation')" class="footer-link hover:text-nexus-blue transition-colors">
-                                Business Automation
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#services" onclick="openLeadModal('SaaS Development')" class="footer-link hover:text-nexus-blue transition-colors">
-                                SaaS Development
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+    <a href="YAHAN_LINK_DAALO" target="_blank" class="w-10 h-10 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-[#1877F2] hover:border-[#1877F2]/50 hover:shadow-[0_0_15px_rgba(24,119,242,0.2)] transition-all duration-300" title="Facebook">
+        <i class="fab fa-facebook-f text-lg"></i>
+    </a>
 
-                <!-- Company Column -->
-                <div>
-                    <h4 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
-                        <i class="fas fa-building text-nexus-purple text-sm"></i> Company
-                    </h4>
-                    <ul class="space-y-3 text-sm font-medium text-slate-400">
-                        <li>
-                            <a href="#portfolio" class="footer-link hover:text-nexus-blue transition-colors">
-                                Our Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#process" class="footer-link hover:text-nexus-blue transition-colors">
-                                Our Process
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#blog" class="footer-link hover:text-nexus-blue transition-colors">
-                                Blog & Insights
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#about" class="footer-link hover:text-nexus-blue transition-colors">
-                                About Us
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" onclick="toggleAdminPanel()" class="footer-link hover:text-nexus-blue transition-colors">
-                                Admin Login
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="footer-link hover:text-nexus-blue transition-colors">
-                                Contact Us
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+    <a href="YAHAN_LINK_DAALO" target="_blank" class="w-10 h-10 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:border-white/50 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all duration-300" title="X (Twitter)">
+        <i class="fab fa-x-twitter text-lg"></i> 
+        </a>
 
-                <!-- Contact Column -->
-                <div>
-                    <h4 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
-                        <i class="fas fa-headset text-nexus-cyan text-sm"></i> Contact
-                    </h4>
-                    <ul class="space-y-4 text-sm font-medium text-slate-400">
-                        <li class="flex items-start gap-3 group">
-                            <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-nexus-blue group-hover:bg-nexus-blue group-hover:text-white transition-all shrink-0">
+    <a href="YAHAN_LINK_DAALO" target="_blank" class="w-10 h-10 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-[#229ED9] hover:border-[#229ED9]/50 hover:shadow-[0_0_15px_rgba(34,158,217,0.2)] transition-all duration-300" title="Telegram">
+        <i class="fab fa-telegram-plane text-lg"></i>
+    </a>
+
+    <a href="mailto:YAHAN_EMAIL_DAALO" class="w-10 h-10 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-[#EA4335] hover:border-[#EA4335]/50 hover:shadow-[0_0_15px_rgba(234,67,53,0.2)] transition-all duration-300" title="Email">
+        <i class="fas fa-envelope text-lg"></i>
+    </a>
+
+</div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 tracking-wide flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-sm bg-cyan-500 opacity-70"></span>
+                    Services
+                </h4>
+                <ul class="space-y-3 text-sm font-medium text-slate-400">
+                    <li><a href="#services" onclick="openLeadModal('Business Website')" class="inline-block hover:text-cyan-400 hover:translate-x-1 transition-all duration-300">Business Websites</a></li>
+                    <li><a href="#services" onclick="openLeadModal('E-commerce')" class="inline-block hover:text-cyan-400 hover:translate-x-1 transition-all duration-300">E-commerce Solutions</a></li>
+                    <li><a href="#services" onclick="openLeadModal('AI Chatbot')" class="inline-block hover:text-cyan-400 hover:translate-x-1 transition-all duration-300">AI Chatbots & Agents</a></li>
+                    <li><a href="#services" onclick="openLeadModal('Web Application')" class="inline-block hover:text-cyan-400 hover:translate-x-1 transition-all duration-300">Custom Web Apps</a></li>
+                    <li><a href="#services" onclick="openLeadModal('Automation')" class="inline-block hover:text-cyan-400 hover:translate-x-1 transition-all duration-300">Business Automation</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 tracking-wide flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-sm bg-indigo-500 opacity-70"></span>
+                    Company
+                </h4>
+                <ul class="space-y-3 text-sm font-medium text-slate-400">
+                    <li><a href="#portfolio" class="inline-block hover:text-indigo-400 hover:translate-x-1 transition-all duration-300">Our Portfolio</a></li>
+                    <li><a href="#process" class="inline-block hover:text-indigo-400 hover:translate-x-1 transition-all duration-300">Agency Process</a></li>
+                    <li><a href="#blog" class="inline-block hover:text-indigo-400 hover:translate-x-1 transition-all duration-300">Tech Blog</a></li>
+                    <li><a href="#" onclick="toggleAdminPanel()" class="inline-block hover:text-rose-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2"><i class="fas fa-lock text-xs"></i> Admin Access</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold text-lg mb-6 tracking-wide flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-sm bg-blue-500 opacity-70"></span>
+                    Comm-Link
+                </h4>
+                <ul class="space-y-4 text-sm font-medium text-slate-400">
+                    <li class="group">
+                        <a href="tel:+917879598076" class="flex items-center gap-3 hover:text-white transition-colors">
+                            <div class="w-8 h-8 rounded-md bg-slate-900/50 border border-slate-800 flex items-center justify-center group-hover:border-cyan-400/50 group-hover:text-cyan-400 transition-all duration-300">
                                 <i class="fas fa-phone-alt text-xs"></i>
                             </div>
-                            <div>
-                                <p class="text-[10px] text-slate-500 uppercase tracking-wider mb-0.5">Sales & Quotes</p>
-                                <a href="tel:+917879598076" class="text-white hover:text-nexus-blue transition-colors font-bold">
-                                    +91 78795 98076
-                                </a>
-                            </div>
-                        </li>
-                        
-                        <li class="flex items-start gap-3 group">
-                            <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-green-400 group-hover:bg-green-500 group-hover:text-white transition-all shrink-0">
+                            +91 78795 98076
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a href="https://wa.me/917879598076" target="_blank" class="flex items-center gap-3 hover:text-white transition-colors">
+                            <div class="w-8 h-8 rounded-md bg-slate-900/50 border border-slate-800 flex items-center justify-center group-hover:border-green-400/50 group-hover:text-green-400 transition-all duration-300">
                                 <i class="fab fa-whatsapp text-sm"></i>
                             </div>
-                            <div>
-                                <p class="text-[10px] text-slate-500 uppercase tracking-wider mb-0.5">WhatsApp Chat</p>
-                                <a href="https://wa.me/917879598076" target="_blank" class="text-white hover:text-green-400 transition-colors font-bold">
-                                    Quick Response
-                                </a>
-                            </div>
-                        </li>
-                        
-                        <li class="flex items-start gap-3 group">
-                            <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-nexus-purple group-hover:bg-nexus-purple group-hover:text-white transition-all shrink-0">
+                            Secure WhatsApp
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a href="mailto:hello@webvanta.com" class="flex items-center gap-3 hover:text-white transition-colors">
+                            <div class="w-8 h-8 rounded-md bg-slate-900/50 border border-slate-800 flex items-center justify-center group-hover:border-indigo-400/50 group-hover:text-indigo-400 transition-all duration-300">
                                 <i class="fas fa-envelope text-xs"></i>
                             </div>
-                            <div>
-                                <p class="text-[10px] text-slate-500 uppercase tracking-wider mb-0.5">Email Us</p>
-                                <a href="mailto:hello@gonexus.tech" class="text-white hover:text-nexus-purple transition-colors font-bold">
-                                    hello@gonexus.tech
-                                </a>
-                            </div>
-                        </li>
-                        
-                        <li class="flex items-start gap-3 group">
-                            <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-nexus-cyan group-hover:bg-nexus-cyan group-hover:text-white transition-all shrink-0">
-                                <i class="fas fa-map-marker-alt text-xs"></i>
-                            </div>
-                            <div>
-                                <p class="text-[10px] text-slate-500 uppercase tracking-wider mb-0.5">Location</p>
-                                <span class="text-white font-bold">India (Worldwide Service)</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Newsletter Section (Optional) -->
-            <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 md:p-8 mb-12">
-                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                    <div>
-                        <h4 class="text-white font-bold text-xl mb-2">Subscribe to Our Newsletter</h4>
-                        <p class="text-slate-400 text-sm font-medium">Get the latest updates on web development and AI trends.</p>
-                    </div>
-                    <form onsubmit="handleNewsletterSubmit(event)" class="flex w-full md:w-auto gap-3">
-                        <input type="email" placeholder="Enter your email" required
-                               class="flex-1 md:w-64 px-5 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:border-nexus-blue focus:outline-none transition-colors font-medium">
-                        <button type="submit" class="px-6 py-3 bg-nexus-blue text-white font-bold rounded-xl hover:bg-blue-600 transition-colors flex items-center gap-2">
-                            <span class="hidden sm:inline">Subscribe</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Bottom Bar -->
-            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-medium text-slate-500">
-                <p>&copy; 2026 GoodWeb Intelligence Agency. All rights reserved.</p>
-                <div class="flex gap-6">
-                    <a href="#" onclick="showToast('Coming Soon', 'Privacy Policy page launching soon')" class="hover:text-white transition-colors">
-                        Privacy Policy
-                    </a>
-                    <a href="#" onclick="showToast('Coming Soon', 'Terms of Service page launching soon')" class="hover:text-white transition-colors">
-                        Terms of Service
-                    </a>
-                    <a href="#" onclick="showToast('Coming Soon', 'Sitemap page launching soon')" class="hover:text-white transition-colors">
-                        Sitemap
-                    </a>
-                </div>
+                            hello@webvanta.com
+                        </a>
+                    </li>
+                    <li class="flex items-center gap-3 text-slate-500">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="fas fa-globe text-xs"></i>
+                        </div>
+                        India (Global Ops)
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
 
-    <!-- ============================================
-         FLOATING ACTION BUTTONS (FAB)
-         ============================================ -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-        
-        <!-- WhatsApp Button -->
-        <a href="https://wa.me/917879598076?text=Hi%20GoodWeb,%20I%20want%20to%20discuss%20a%20project" 
-           target="_blank"
-           class="fab-btn w-14 h-14 bg-green-500 rounded-full shadow-[0_10px_30px_rgba(34,197,94,0.4)] flex items-center justify-center text-white text-3xl hover:shadow-[0_15px_40px_rgba(34,197,94,0.5)]"
-           title="Chat on WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        
-        <!-- Scroll to Top Button -->
-        <button onclick="scrollToTop()" 
-                id="scrollTopBtn"
-                class="fab-btn w-14 h-14 bg-slate-900 text-white rounded-full flex items-center justify-center text-xl hover:bg-nexus-blue shadow-lg opacity-0 pointer-events-none translate-y-10">
-            <i class="fas fa-arrow-up"></i>
-        </button>
-    </div>
-
-    <!-- ============================================
-         MOBILE STICKY CTA (Bottom Bar)
-         ============================================ -->
-    <div class="mobile-sticky-cta fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-4 hidden z-40 shadow-[0_-10px_30px_rgba(0,0,0,0.1)]">
-        <div class="flex gap-3 w-full max-w-md mx-auto">
-            <a href="tel:+917879598076" class="flex-1 bg-slate-100 text-slate-900 py-3.5 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-200 transition-colors">
-                <i class="fas fa-phone-alt text-nexus-blue"></i>
-                Call Now
-            </a>
-            <button onclick="openLeadModal()" class="flex-1 bg-slate-900 text-white py-3.5 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg hover:bg-nexus-blue transition-colors">
-                <i class="fas fa-paper-plane"></i>
-                Get Quote
-            </button>
+        <div class="border-t border-slate-800/60 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-slate-500">
+            <p>&copy; 2026 WebVanta Intelligence Agency. All systems operational.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-cyan-400 transition-colors">Privacy Directive</a>
+                <a href="#" class="hover:text-cyan-400 transition-colors">Terms of Service</a>
+            </div>
         </div>
     </div>
+</footer>
