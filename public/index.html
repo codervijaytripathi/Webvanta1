@@ -280,30 +280,74 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
             
-            <!-- Logo -->
-            <div class="flex items-center gap-4 cursor-pointer group" onclick="window.scrollTo(0,0)">
-                <div class="relative flex-shrink-0">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-nexus-blue to-nexus-purple rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-                    <div class="relative w-12 h-12 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-white shadow-lg transform group-hover:scale-105 group-hover:-rotate-3 transition-all duration-500">
-                        <i class="fas fa-brain text-2xl bg-gradient-to-br from-nexus-blue to-nexus-purple bg-clip-text text-transparent"></i>
-                        <div class="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full flex items-center justify-center shadow-sm">
-                            <div class="w-1.5 h-1.5 bg-nexus-cyan rounded-full animate-ping absolute"></div>
-                            <div class="w-1.5 h-1.5 bg-nexus-cyan rounded-full"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="flex flex-col"> 
-                    <h1 class="font-display font-black text-2xl tracking-tighter text-slate-900 leading-none flex items-center gap-1 group-hover:text-nexus-blue transition-colors">
-                        Web<span class="text-gradient">Vanta</span>
-                    </h1>
-                    <div class="flex items-center gap-2 mt-1">
-                        <span class="h-[2px] w-4 bg-nexus-blue/50 rounded-full"></span>
-                        <p class="text-[9px] text-slate-500 font-black uppercase tracking-[0.3em] leading-none">Intelligence Agency</p>
-                    </div>
-                </div>
-            </div>
+           <div class="flex items-center gap-5 cursor-pointer group" onclick="window.scrollTo(0,0)">
 
+  <div class="relative w-14 h-14 flex items-center justify-center">
+    <div class="absolute inset-0 bg-gradient-to-br from-cyan-400 to-indigo-600 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+    
+    <svg viewBox="0 0 100 100" 
+         class="relative w-12 h-12 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3" 
+         xmlns="http://www.w3.org/2000/svg">
+      
+      <defs>
+        <linearGradient id="wvPremium" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#22d3ee"/>   <stop offset="50%" stop-color="#3b82f6"/>   <stop offset="100%" stop-color="#4f46e5"/>  </linearGradient>
+        
+        <filter id="neonGlow">
+          <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+          <feMerge>
+            <feMergeNode in="coloredBlur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+
+      <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" 
+               fill="none" 
+               stroke="url(#wvPremium)" 
+               stroke-width="1.5" 
+               opacity="0.2" 
+               class="group-hover:opacity-100 transition-opacity duration-500"/>
+
+      <path d="M15,35 L35,75 L50,45 L65,75 L85,35" 
+            fill="none" 
+            stroke="url(#wvPremium)" 
+            stroke-width="5" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            filter="url(#neonGlow)"/>
+
+      <path d="M35,25 L50,60 L65,25" 
+            fill="none" 
+            stroke="#e0e7ff" 
+            stroke-width="2.5" 
+            stroke-linecap="round" 
+            stroke-linejoin="round"/>
+
+      <circle cx="15" cy="35" r="3" fill="#22d3ee"/>
+      <circle cx="85" cy="35" r="3" fill="#4f46e5"/>
+      <circle cx="50" cy="60" r="2.5" fill="#ffffff"/>
+
+    </svg>
+  </div>
+
+  <div class="flex flex-col leading-none border-l-2 border-slate-200/50 pl-4">
+
+    <h1 class="font-black text-3xl tracking-tighter text-slate-800 transition-all duration-300 group-hover:text-slate-900">
+      Web<span class="bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 bg-clip-text text-transparent group-hover:drop-shadow-sm">Vanta</span>
+    </h1>
+
+    <div class="flex items-center gap-1.5 mt-1.5">
+      <div class="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse"></div>
+      
+      <p class="text-[9px] font-bold tracking-[0.4em] text-slate-400 group-hover:text-indigo-500 transition-colors duration-300">
+        INTELLIGENCE AGENCY
+      </p>
+    </div>
+
+  </div>
+
+</div>
             <!-- Desktop Navigation -->
             <div class="hidden lg:flex items-center gap-1 bg-white/40 backdrop-blur-md px-2 py-1.5 rounded-full border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative group">
                 <a href="#services" class="nav-link text-sm font-bold text-slate-500 hover:text-slate-900 px-5 py-2.5 flex items-center gap-2">
@@ -1229,95 +1273,149 @@
    <!-- ========================================== -->
    <!-- FOOTER - Complete Working Version -->
    <!-- ========================================== -->
-   <footer class="bg-slate-950 border-t border-slate-800 pt-20 pb-10">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+   <footer class="relative bg-slate-950 pt-20 pb-10 overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
+    
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-cyan-900/10 blur-[100px] pointer-events-none"></div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-            <!-- Brand -->
+            
             <div class="space-y-6">
-                <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-nexus-blue font-bold shadow-lg">
-                        <i class="fas fa-brain text-xl"></i>
+                <div class="flex items-center gap-3 group cursor-pointer">
+                    <div class="relative w-10 h-10 flex items-center justify-center">
+                        <svg viewBox="0 0 100 100" class="w-10 h-10 transition-transform duration-500 group-hover:scale-110" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="footerGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#22d3ee"/>
+                                    <stop offset="100%" stop-color="#4f46e5"/>
+                                </linearGradient>
+                            </defs>
+                            <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" fill="none" stroke="url(#footerGlow)" stroke-width="1.5" opacity="0.4" class="group-hover:opacity-100 transition-opacity duration-500"/>
+                            <path d="M15,35 L35,75 L50,45 L65,75 L85,35" fill="none" stroke="url(#footerGlow)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M35,25 L50,60 L65,25" fill="none" stroke="#e0e7ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
                     <div>
-                        <h3 class="font-display font-black text-2xl text-white">WebVanta</h3>
-                        <p class="text-[10px] text-nexus-cyan font-bold uppercase tracking-widest">Web + AI Agency</p>
+                        <h3 class="font-black text-2xl text-white tracking-tight">
+                            Web<span class="bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent">Vanta</span>
+                        </h3>
+                        <div class="flex items-center gap-1.5 mt-0.5">
+                            <div class="w-1 h-1 rounded-full bg-cyan-500 animate-pulse"></div>
+                            <p class="text-[8px] text-slate-400 font-bold uppercase tracking-[0.3em]">Intelligence Agency</p>
+                        </div>
                     </div>
                 </div>
-                <p class="text-sm text-slate-400 font-medium leading-relaxed">
+                
+                <p class="text-sm text-slate-400 font-medium leading-relaxed pr-4">
                     Building smart websites and intelligent digital systems for businesses worldwide.
                 </p>
-                <div class="flex gap-3">
-                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:text-white hover:bg-nexus-blue transition-all">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:text-white hover:bg-nexus-blue transition-all">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:text-white hover:bg-nexus-blue transition-all">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://wa.me/917879598076" target="_blank" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:text-white hover:bg-green-500 transition-all">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
+                
+                <div class="flex flex-wrap gap-3 mt-6">
+    
+    <a href="YAHAN_LINK_DAALO" target="_blank" class="w-10 h-10 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-[#E1306C] hover:border-[#E1306C]/50 hover:shadow-[0_0_15px_rgba(225,48,108,0.2)] transition-all duration-300" title="Instagram">
+        <i class="fab fa-instagram text-lg"></i>
+    </a>
+    
+    <a href="YAHAN_LINK_DAALO" target="_blank" class="w-10 h-10 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-[#25D366] hover:border-[#25D366]/50 hover:shadow-[0_0_15px_rgba(37,211,102,0.2)] transition-all duration-300" title="WhatsApp">
+        <i class="fab fa-whatsapp text-lg"></i>
+    </a>
+
+    <a href="YAHAN_LINK_DAALO" target="_blank" class="w-10 h-10 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-[#1877F2] hover:border-[#1877F2]/50 hover:shadow-[0_0_15px_rgba(24,119,242,0.2)] transition-all duration-300" title="Facebook">
+        <i class="fab fa-facebook-f text-lg"></i>
+    </a>
+
+    <a href="YAHAN_LINK_DAALO" target="_blank" class="w-10 h-10 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:border-white/50 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all duration-300" title="X (Twitter)">
+        <i class="fab fa-x-twitter text-lg"></i> 
+        </a>
+
+    <a href="YAHAN_LINK_DAALO" target="_blank" class="w-10 h-10 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-[#229ED9] hover:border-[#229ED9]/50 hover:shadow-[0_0_15px_rgba(34,158,217,0.2)] transition-all duration-300" title="Telegram">
+        <i class="fab fa-telegram-plane text-lg"></i>
+    </a>
+
+    <a href="mailto:YAHAN_EMAIL_DAALO" class="w-10 h-10 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-[#EA4335] hover:border-[#EA4335]/50 hover:shadow-[0_0_15px_rgba(234,67,53,0.2)] transition-all duration-300" title="Email">
+        <i class="fas fa-envelope text-lg"></i>
+    </a>
+
+</div>
             </div>
 
-            <!-- Services -->
             <div>
-                <h4 class="text-white font-bold text-lg mb-6">Services</h4>
+                <h4 class="text-white font-bold text-lg mb-6 tracking-wide flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-sm bg-cyan-500 opacity-70"></span>
+                    Services
+                </h4>
                 <ul class="space-y-3 text-sm font-medium text-slate-400">
-                    <li><a href="#services" onclick="openLeadModal('Business Website')" class="hover:text-nexus-blue transition-colors">Business Websites</a></li>
-                    <li><a href="#services" onclick="openLeadModal('E-commerce')" class="hover:text-nexus-blue transition-colors">E-commerce</a></li>
-                    <li><a href="#services" onclick="openLeadModal('AI Chatbot')" class="hover:text-nexus-blue transition-colors">AI Chatbots</a></li>
-                    <li><a href="#services" onclick="openLeadModal('Web Application')" class="hover:text-nexus-blue transition-colors">Web Applications</a></li>
-                    <li><a href="#services" onclick="openLeadModal('Automation')" class="hover:text-nexus-blue transition-colors">Business Automation</a></li>
+                    <li><a href="#services" onclick="openLeadModal('Business Website')" class="inline-block hover:text-cyan-400 hover:translate-x-1 transition-all duration-300">Business Websites</a></li>
+                    <li><a href="#services" onclick="openLeadModal('E-commerce')" class="inline-block hover:text-cyan-400 hover:translate-x-1 transition-all duration-300">E-commerce Solutions</a></li>
+                    <li><a href="#services" onclick="openLeadModal('AI Chatbot')" class="inline-block hover:text-cyan-400 hover:translate-x-1 transition-all duration-300">AI Chatbots & Agents</a></li>
+                    <li><a href="#services" onclick="openLeadModal('Web Application')" class="inline-block hover:text-cyan-400 hover:translate-x-1 transition-all duration-300">Custom Web Apps</a></li>
+                    <li><a href="#services" onclick="openLeadModal('Automation')" class="inline-block hover:text-cyan-400 hover:translate-x-1 transition-all duration-300">Business Automation</a></li>
                 </ul>
             </div>
 
-            <!-- Company -->
             <div>
-                <h4 class="text-white font-bold text-lg mb-6">Company</h4>
+                <h4 class="text-white font-bold text-lg mb-6 tracking-wide flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-sm bg-indigo-500 opacity-70"></span>
+                    Company
+                </h4>
                 <ul class="space-y-3 text-sm font-medium text-slate-400">
-                    <li><a href="#portfolio" class="hover:text-nexus-blue transition-colors">Portfolio</a></li>
-                    <li><a href="#process" class="hover:text-nexus-blue transition-colors">Our Process</a></li>
-                    <li><a href="#blog" class="hover:text-nexus-blue transition-colors">Blog</a></li>
-                    <li><a href="#" onclick="toggleAdminPanel()" class="hover:text-nexus-blue transition-colors">Admin Login</a></li>
+                    <li><a href="#portfolio" class="inline-block hover:text-indigo-400 hover:translate-x-1 transition-all duration-300">Our Portfolio</a></li>
+                    <li><a href="#process" class="inline-block hover:text-indigo-400 hover:translate-x-1 transition-all duration-300">Agency Process</a></li>
+                    <li><a href="#blog" class="inline-block hover:text-indigo-400 hover:translate-x-1 transition-all duration-300">Tech Blog</a></li>
+                    <li><a href="#" onclick="toggleAdminPanel()" class="inline-block hover:text-rose-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2"><i class="fas fa-lock text-xs"></i> Admin Access</a></li>
                 </ul>
             </div>
 
-            <!-- Contact -->
             <div>
-                <h4 class="text-white font-bold text-lg mb-6">Contact</h4>
+                <h4 class="text-white font-bold text-lg mb-6 tracking-wide flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-sm bg-blue-500 opacity-70"></span>
+                    Comm-Link
+                </h4>
                 <ul class="space-y-4 text-sm font-medium text-slate-400">
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-phone-alt text-nexus-blue w-5"></i>
-                        <a href="tel:+917879598076" class="hover:text-white transition-colors">+91 78795 98076</a>
+                    <li class="group">
+                        <a href="tel:+917879598076" class="flex items-center gap-3 hover:text-white transition-colors">
+                            <div class="w-8 h-8 rounded-md bg-slate-900/50 border border-slate-800 flex items-center justify-center group-hover:border-cyan-400/50 group-hover:text-cyan-400 transition-all duration-300">
+                                <i class="fas fa-phone-alt text-xs"></i>
+                            </div>
+                            +91 78795 98076
+                        </a>
                     </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fab fa-whatsapp text-green-400 w-5 text-lg"></i>
-                        <a href="https://wa.me/917879598076" target="_blank" class="hover:text-white transition-colors">WhatsApp Chat</a>
+                    <li class="group">
+                        <a href="https://wa.me/917879598076" target="_blank" class="flex items-center gap-3 hover:text-white transition-colors">
+                            <div class="w-8 h-8 rounded-md bg-slate-900/50 border border-slate-800 flex items-center justify-center group-hover:border-green-400/50 group-hover:text-green-400 transition-all duration-300">
+                                <i class="fab fa-whatsapp text-sm"></i>
+                            </div>
+                            Secure WhatsApp
+                        </a>
                     </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-envelope text-nexus-purple w-5"></i>
-                        <a href="mailto:hello@webvanta.com" class="hover:text-white transition-colors">hello@webvanta.com</a>
+                    <li class="group">
+                        <a href="mailto:hello@webvanta.com" class="flex items-center gap-3 hover:text-white transition-colors">
+                            <div class="w-8 h-8 rounded-md bg-slate-900/50 border border-slate-800 flex items-center justify-center group-hover:border-indigo-400/50 group-hover:text-indigo-400 transition-all duration-300">
+                                <i class="fas fa-envelope text-xs"></i>
+                            </div>
+                            hello@webvanta.com
+                        </a>
                     </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-globe text-nexus-cyan w-5"></i>
-                        <span>India (Worldwide Service)</span>
+                    <li class="flex items-center gap-3 text-slate-500">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="fas fa-globe text-xs"></i>
+                        </div>
+                        India (Global Ops)
                     </li>
                 </ul>
             </div>
         </div>
 
-        <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-medium text-slate-500">
-            <p>&copy; 2026 WebVanta Intelligence Agency. All rights reserved.</p>
+        <div class="border-t border-slate-800/60 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-slate-500">
+            <p>&copy; 2026 WebVanta Intelligence Agency. All systems operational.</p>
             <div class="flex gap-6">
-                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-cyan-400 transition-colors">Privacy Directive</a>
+                <a href="#" class="hover:text-cyan-400 transition-colors">Terms of Service</a>
             </div>
         </div>
     </div>
-   </footer>
+</footer>
 
    <!-- ========================================== -->
    <!-- FLOATING ACTION BUTTONS -->
