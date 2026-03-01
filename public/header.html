@@ -1,160 +1,185 @@
-<body class="font-sans bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+ <!-- ========================================== -->
+   <!-- NAVBAR (Header) - Complete Working Version -->
+   <!-- ========================================== -->
+   <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 glass bg-white/80 border-b border-slate-200">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            
+           <div class="flex items-center gap-5 cursor-pointer group" onclick="window.scrollTo(0,0)">
 
-    <!-- ============================================
-         HEADER / NAVBAR COMPONENT
-         ============================================ -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 glass bg-white/80 border-b border-slate-200">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                
-                <!-- Logo -->
-                <div class="flex items-center gap-4 cursor-pointer group" onclick="window.scrollTo(0,0)">
-                    <div class="relative flex-shrink-0">
-                        <div class="absolute -inset-1 bg-gradient-to-r from-nexus-blue to-nexus-purple rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-                        <div class="relative w-12 h-12 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-white shadow-lg transform group-hover:scale-105 group-hover:-rotate-3 transition-all duration-500">
-                            <i class="fas fa-brain text-2xl bg-gradient-to-br from-nexus-blue to-nexus-purple bg-clip-text text-transparent"></i>
-                            <div class="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full flex items-center justify-center shadow-sm">
-                                <div class="w-1.5 h-1.5 bg-nexus-cyan rounded-full animate-ping absolute"></div>
-                                <div class="w-1.5 h-1.5 bg-nexus-cyan rounded-full"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-col"> 
-                        <h1 class="font-display font-black text-2xl tracking-tighter text-slate-900 leading-none flex items-center gap-1 group-hover:text-nexus-blue transition-colors">
-                            Good<span class="text-gradient">Web</span>
-                        </h1>
-                        <div class="flex items-center gap-2 mt-1">
-                            <span class="h-[2px] w-4 bg-nexus-blue/50 rounded-full"></span>
-                            <p class="text-[9px] text-slate-500 font-black uppercase tracking-[0.3em] leading-none">Intelligence Agency</p>
-                        </div>
-                    </div>
-                </div>
+  <div class="relative w-14 h-14 flex items-center justify-center">
+    <div class="absolute inset-0 bg-gradient-to-br from-cyan-400 to-indigo-600 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+    
+    <svg viewBox="0 0 100 100" 
+         class="relative w-12 h-12 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3" 
+         xmlns="http://www.w3.org/2000/svg">
+      
+      <defs>
+        <linearGradient id="wvPremium" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#22d3ee"/>   <stop offset="50%" stop-color="#3b82f6"/>   <stop offset="100%" stop-color="#4f46e5"/>  </linearGradient>
+        
+        <filter id="neonGlow">
+          <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+          <feMerge>
+            <feMergeNode in="coloredBlur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
 
-                <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center gap-1 bg-white/40 backdrop-blur-md px-2 py-1.5 rounded-full border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative group">
-                    <a href="#services" class="nav-link text-sm font-bold text-slate-500 hover:text-slate-900 px-5 py-2.5 flex items-center gap-2">
-                        <i class="fas fa-layer-group text-[10px] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
-                        <span>Services</span>
-                    </a>
-                    
-                    <a href="#portfolio" class="nav-link text-sm font-bold text-slate-500 hover:text-slate-900 px-5 py-2.5 flex items-center gap-2">
-                        <i class="fas fa-briefcase text-[10px] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
-                        <span>Portfolio</span>
-                    </a>
-                    
-                    <a href="#process" class="nav-link text-sm font-bold text-slate-500 hover:text-slate-900 px-5 py-2.5 flex items-center gap-2">
-                        <i class="fas fa-sync text-[10px] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
-                        <span>Process</span>
-                    </a>
-                    
-                    <a href="#pricing" class="nav-link text-sm font-bold text-slate-500 hover:text-slate-900 px-5 py-2.5 flex items-center gap-2">
-                        <i class="fas fa-tags text-[10px] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
-                        <span>Pricing</span>
-                    </a>
-                    
-                    <a href="#blog" class="nav-link text-sm font-bold text-slate-500 hover:text-slate-900 px-5 py-2.5 flex items-center gap-2">
-                        <i class="fas fa-pen-nib text-[10px] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
-                        <span>Blog</span>
-                    </a>
-                </div>
+      <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" 
+               fill="none" 
+               stroke="url(#wvPremium)" 
+               stroke-width="1.5" 
+               opacity="0.2" 
+               class="group-hover:opacity-100 transition-opacity duration-500"/>
 
-                <!-- CTA / Contact -->
-                <div class="flex items-center gap-3 sm:gap-5">
-                    <!-- Dark Mode Toggle -->
-                    <button onclick="toggleDarkMode()" class="w-10 h-10 rounded-full flex items-center justify-center text-slate-400 hover:text-nexus-blue hover:bg-blue-50 transition-all" title="Toggle Dark Mode">
-                        <i class="fas fa-moon text-sm" id="darkModeIcon"></i>
-                    </button>
+      <path d="M15,35 L35,75 L50,45 L65,75 L85,35" 
+            fill="none" 
+            stroke="url(#wvPremium)" 
+            stroke-width="5" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            filter="url(#neonGlow)"/>
 
-                    <!-- Contact Dropdown -->
-                    <div class="relative group hidden sm:block">
-                        <button class="flex items-center gap-2.5 bg-white hover:bg-slate-50 text-slate-700 px-5 py-2.5 rounded-full border border-slate-200 font-bold text-sm shadow-sm hover:shadow transition-all transform hover:-translate-y-0.5">
-                            <span class="relative flex h-2 w-2">
-                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                            </span>
-                            <span>Contact Support</span>
-                            <i class="fas fa-chevron-down text-[10px] text-slate-400 group-hover:rotate-180 transition-transform"></i>
-                        </button>
+      <path d="M35,25 L50,60 L65,25" 
+            fill="none" 
+            stroke="#e0e7ff" 
+            stroke-width="2.5" 
+            stroke-linecap="round" 
+            stroke-linejoin="round"/>
 
-                        <!-- Contact Dropdown Menu -->
-                        <div class="absolute right-0 mt-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 translate-y-4 transition-all duration-500 z-[9999] origin-top-right">
-                            <div class="relative overflow-hidden bg-white/95 backdrop-blur-xl rounded-2xl border border-slate-100 shadow-[0_20px_40px_rgba(0,0,0,0.1)] p-2 space-y-1">
-                                <a href="tel:+919301559671" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-all group/item">
-                                    <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center shadow-sm text-blue-600 group-hover/item:scale-110 transition-transform">
-                                        <i class="fas fa-headset"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">Primary Support</p>
-                                        <p class="text-sm font-black text-slate-900 leading-none group-hover/item:text-blue-600 transition-colors">9301559671</p>
-                                    </div>
-                                </a>
-                                <a href="tel:+917879598076" class="flex items-center gap-3 p-3 rounded-xl hover:bg-purple-50 transition-all group/item">
-                                    <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center shadow-sm text-purple-600 group-hover/item:scale-110 transition-transform">
-                                        <i class="fas fa-headset"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">Sales / Quotes</p>
-                                        <p class="text-sm font-black text-slate-900 leading-none group-hover/item:text-purple-600 transition-colors">7879598076</p>
-                                    </div>
-                                </a>
-                                <a href="tel:+916268412703" class="flex items-center gap-3 p-3 rounded-xl hover:bg-cyan-50 transition-all group/item">
-                                    <div class="w-10 h-10 bg-cyan-100 rounded-xl flex items-center justify-center shadow-sm text-cyan-600 group-hover/item:scale-110 transition-transform">
-                                        <i class="fas fa-headset"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">Tech Support</p>
-                                        <p class="text-sm font-black text-slate-900 leading-none group-hover/item:text-cyan-600 transition-colors">6268412703</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+      <circle cx="15" cy="35" r="3" fill="#22d3ee"/>
+      <circle cx="85" cy="35" r="3" fill="#4f46e5"/>
+      <circle cx="50" cy="60" r="2.5" fill="#ffffff"/>
 
-                    <!-- Start Project Button -->
-                    <button onclick="openLeadModal()" class="hidden sm:flex relative overflow-hidden bg-slate-900 text-white px-7 py-3 rounded-full font-bold text-sm shadow-[0_8px_16px_rgba(0,0,0,0.15)] hover:shadow-[0_12px_24px_rgba(37,99,235,0.25)] transition-all transform hover:-translate-y-0.5 group">
-                        <div class="absolute inset-0 w-0 bg-gradient-to-r from-nexus-blue to-nexus-purple transition-all duration-500 ease-out group-hover:w-full"></div>
-                        <span class="relative flex items-center gap-2"><i class="fas fa-rocket"></i> Start Project</span>
-                    </button>
+    </svg>
+  </div>
 
-                    <!-- Admin & Mobile Menu Toggle -->
-                    <div class="flex items-center gap-1 border-l border-slate-200 pl-4 ml-1">
-                        <button onclick="toggleAdminPanel()" class="w-10 h-10 rounded-full flex items-center justify-center text-slate-400 hover:text-nexus-blue hover:bg-blue-50 transition-all" title="Admin Login">
-                            <i class="fas fa-lock text-sm"></i>
-                        </button>
-                        <button onclick="toggleMobileMenu()" class="lg:hidden w-10 h-10 rounded-full flex items-center justify-center text-slate-800 hover:text-nexus-blue hover:bg-blue-50 transition-all">
-                            <i class="fas fa-bars text-xl"></i>
-                        </button>
-                    </div>
-                </div>
+  <div class="flex flex-col leading-none border-l-2 border-slate-200/50 pl-4">
+
+    <h1 class="font-black text-3xl tracking-tighter text-slate-800 transition-all duration-300 group-hover:text-slate-900">
+      Web<span class="bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 bg-clip-text text-transparent group-hover:drop-shadow-sm">Vanta</span>
+    </h1>
+
+    <div class="flex items-center gap-1.5 mt-1.5">
+      <div class="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse"></div>
+      
+      <p class="text-[9px] font-bold tracking-[0.4em] text-slate-400 group-hover:text-indigo-500 transition-colors duration-300">
+        INTELLIGENCE AGENCY
+      </p>
+    </div>
+
+  </div>
+
+</div>
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center gap-1 bg-white/40 backdrop-blur-md px-2 py-1.5 rounded-full border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative group">
+                <a href="#services" class="nav-link text-sm font-bold text-slate-500 hover:text-slate-900 px-5 py-2.5 flex items-center gap-2">
+                    <i class="fas fa-layer-group text-[10px] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
+                    <span>Services</span>
+                </a>
+                <a href="#portfolio" class="nav-link text-sm font-bold text-slate-500 hover:text-slate-900 px-5 py-2.5 flex items-center gap-2">
+                    <i class="fas fa-briefcase text-[10px] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="#process" class="nav-link text-sm font-bold text-slate-500 hover:text-slate-900 px-5 py-2.5 flex items-center gap-2">
+                    <i class="fas fa-sync text-[10px] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
+                    <span>Process</span>
+                </a>
+                <a href="#pricing" class="nav-link text-sm font-bold text-slate-500 hover:text-slate-900 px-5 py-2.5 flex items-center gap-2">
+                    <i class="fas fa-tags text-[10px] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
+                    <span>Pricing</span>
+                </a>
+                <a href="#blog" class="nav-link text-sm font-bold text-slate-500 hover:text-slate-900 px-5 py-2.5 flex items-center gap-2">
+                    <i class="fas fa-pen-nib text-[10px] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
+                    <span>Blog</span>
+                </a>
             </div>
-        </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="lg:hidden hidden border-t border-slate-200 absolute w-full bg-white/95 backdrop-blur-xl shadow-xl mobile-menu-enter">
-            <div class="container mx-auto px-4 py-6 flex flex-col gap-2">
-                <a href="#services" onclick="toggleMobileMenu()" class="text-slate-800 font-bold py-3 border-b border-slate-100">Services</a>
-                <a href="#portfolio" onclick="toggleMobileMenu()" class="text-slate-800 font-bold py-3 border-b border-slate-100">Portfolio</a>
-                <a href="#process" onclick="toggleMobileMenu()" class="text-slate-800 font-bold py-3 border-b border-slate-100">Process</a>
-                <a href="#pricing" onclick="toggleMobileMenu()" class="text-slate-800 font-bold py-3 border-b border-slate-100">Pricing</a>
-                
-                <div class="py-4 space-y-3">
-                    <p class="text-[10px] text-slate-500 font-bold uppercase">Contact Support</p>
-                    <div class="grid grid-cols-1 gap-2">
-                        <a href="tel:+919301559671" class="text-slate-700 text-sm font-bold flex items-center gap-2"><i class="fas fa-phone-alt text-nexus-blue"></i> 9301559671</a>
-                        <a href="tel:+917879598076" class="text-slate-700 text-sm font-bold flex items-center gap-2"><i class="fas fa-phone-alt text-nexus-blue"></i> 7879598076</a>
-                        <a href="tel:+916268412703" class="text-slate-700 text-sm font-bold flex items-center gap-2"><i class="fas fa-phone-alt text-nexus-blue"></i> 6268412703</a>
+            <!-- CTA / Contact -->
+            <div class="flex items-center gap-3 sm:gap-5">
+                <div class="relative group hidden sm:block">
+                    <button class="flex items-center gap-2.5 bg-white hover:bg-slate-50 text-slate-700 px-5 py-2.5 rounded-full border border-slate-200 font-bold text-sm shadow-sm hover:shadow transition-all transform hover:-translate-y-0.5">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                        </span>
+                        <span>Contact Support</span>
+                        <i class="fas fa-chevron-down text-[10px] text-slate-400 group-hover:rotate-180 transition-transform"></i>
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div class="absolute right-0 mt-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 translate-y-4 transition-all duration-500 z-[9999] origin-top-right">
+                        <div class="relative overflow-hidden bg-white/95 backdrop-blur-xl rounded-2xl border border-slate-100 shadow-[0_20px_40px_rgba(0,0,0,0.1)] p-2 space-y-1">
+                            <a href="tel:+919301559671" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-all group/item">
+                                <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center shadow-sm text-blue-600 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">Primary Support</p>
+                                    <p class="text-sm font-black text-slate-900 leading-none group-hover/item:text-blue-600 transition-colors">9301559671</p>
+                                </div>
+                            </a>
+                            <a href="tel:+917879598076" class="flex items-center gap-3 p-3 rounded-xl hover:bg-purple-50 transition-all group/item">
+                                <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center shadow-sm text-purple-600 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">Sales / Quotes</p>
+                                    <p class="text-sm font-black text-slate-900 leading-none group-hover/item:text-purple-600 transition-colors">7879598076</p>
+                                </div>
+                            </a>
+                            <a href="tel:+916268412703" class="flex items-center gap-3 p-3 rounded-xl hover:bg-cyan-50 transition-all group/item">
+                                <div class="w-10 h-10 bg-cyan-100 rounded-xl flex items-center justify-center shadow-sm text-cyan-600 group-hover/item:scale-110 transition-transform">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mb-0.5">Tech Support</p>
+                                    <p class="text-sm font-black text-slate-900 leading-none group-hover/item:text-cyan-600 transition-colors">6268412703</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <button onclick="openLeadModal(); toggleMobileMenu();" class="bg-gradient-to-r from-nexus-blue to-nexus-purple text-white py-4 rounded-2xl font-bold w-full mt-2 shadow-lg shadow-blue-500/20">
-                    Start Your Project
+                <button onclick="openLeadModal()" class="hidden sm:flex relative overflow-hidden bg-slate-900 text-white px-7 py-3 rounded-full font-bold text-sm shadow-[0_8px_16px_rgba(0,0,0,0.15)] hover:shadow-[0_12px_24px_rgba(37,99,235,0.25)] transition-all transform hover:-translate-y-0.5 group">
+                    <div class="absolute inset-0 w-0 bg-gradient-to-r from-nexus-blue to-nexus-purple transition-all duration-500 ease-out group-hover:w-full"></div>
+                    <span class="relative flex items-center gap-2"><i class="fas fa-rocket"></i> Start Project</span>
                 </button>
+
+                <div class="flex items-center gap-1 border-l border-slate-200 pl-4 ml-1">
+                    <button onclick="toggleAdminPanel()" class="w-10 h-10 rounded-full flex items-center justify-center text-slate-400 hover:text-nexus-blue hover:bg-blue-50 transition-all" title="Admin Login">
+                        <i class="fas fa-lock text-sm"></i>
+                    </button>
+                    <button onclick="toggleMobileMenu()" class="lg:hidden w-10 h-10 rounded-full flex items-center justify-center text-slate-800 hover:text-nexus-blue hover:bg-blue-50 transition-all">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
             </div>
         </div>
-    </nav>
+    </div>
 
-    <!-- Spacer for fixed navbar -->
-    <div class="h-20"></div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-slate-200 absolute w-full bg-white/95 backdrop-blur-xl shadow-xl">
+        <div class="container mx-auto px-4 py-6 flex flex-col gap-2">
+            <a href="#services" onclick="toggleMobileMenu()" class="text-slate-800 font-bold py-3 border-b border-slate-100">Services</a>
+            <a href="#portfolio" onclick="toggleMobileMenu()" class="text-slate-800 font-bold py-3 border-b border-slate-100">Portfolio</a>
+            <a href="#process" onclick="toggleMobileMenu()" class="text-slate-800 font-bold py-3 border-b border-slate-100">Process</a>
+            <a href="#pricing" onclick="toggleMobileMenu()" class="text-slate-800 font-bold py-3 border-b border-slate-100">Pricing</a>
+            
+            <div class="py-4 space-y-3">
+                <p class="text-[10px] text-slate-500 font-bold uppercase">Contact Support</p>
+                <div class="grid grid-cols-1 gap-2">
+                    <a href="tel:+919301559671" class="text-slate-700 text-sm font-bold flex items-center gap-2"><i class="fas fa-phone-alt text-nexus-blue"></i> 9301559671</a>
+                    <a href="tel:+917879598076" class="text-slate-700 text-sm font-bold flex items-center gap-2"><i class="fas fa-phone-alt text-nexus-blue"></i> 7879598076</a>
+                    <a href="tel:+916268412703" class="text-slate-700 text-sm font-bold flex items-center gap-2"><i class="fas fa-phone-alt text-nexus-blue"></i> 6268412703</a>
+                </div>
+            </div>
 
-  
+            <button onclick="openLeadModal(); toggleMobileMenu();" class="bg-gradient-to-r from-nexus-blue to-nexus-purple text-white py-4 rounded-2xl font-bold w-full mt-2 shadow-lg shadow-blue-500/20">
+                Start Your Project
+            </button>
+        </div>
+    </div>
+   </nav>-->
