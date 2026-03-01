@@ -11,6 +11,7 @@
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <title>WebVanta | Premium Web Development & AI Solutions Agency</title>
+   
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -47,6 +48,10 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    
     
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -273,9 +278,11 @@
 </head>
 <body class="font-sans bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
 
+    <div id="header"></div>
+
    <!-- ========================================== -->
    <!-- NAVBAR (Header) - Complete Working Version -->
-   <!-- ========================================== -->
+   <!-- ========================================== --
    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 glass bg-white/80 border-b border-slate-200">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
@@ -348,7 +355,7 @@
   </div>
 
 </div>
-            <!-- Desktop Navigation -->
+            <!-- Desktop Navigation --
             <div class="hidden lg:flex items-center gap-1 bg-white/40 backdrop-blur-md px-2 py-1.5 rounded-full border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative group">
                 <a href="#services" class="nav-link text-sm font-bold text-slate-500 hover:text-slate-900 px-5 py-2.5 flex items-center gap-2">
                     <i class="fas fa-layer-group text-[10px] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"></i>
@@ -372,7 +379,7 @@
                 </a>
             </div>
 
-            <!-- CTA / Contact -->
+            <!-- CTA / Contact --
             <div class="flex items-center gap-3 sm:gap-5">
                 <div class="relative group hidden sm:block">
                     <button class="flex items-center gap-2.5 bg-white hover:bg-slate-50 text-slate-700 px-5 py-2.5 rounded-full border border-slate-200 font-bold text-sm shadow-sm hover:shadow transition-all transform hover:-translate-y-0.5">
@@ -384,7 +391,7 @@
                         <i class="fas fa-chevron-down text-[10px] text-slate-400 group-hover:rotate-180 transition-transform"></i>
                     </button>
 
-                    <!-- Dropdown -->
+                    <!-- Dropdown --
                     <div class="absolute right-0 mt-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 translate-y-4 transition-all duration-500 z-[9999] origin-top-right">
                         <div class="relative overflow-hidden bg-white/95 backdrop-blur-xl rounded-2xl border border-slate-100 shadow-[0_20px_40px_rgba(0,0,0,0.1)] p-2 space-y-1">
                             <a href="tel:+919301559671" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-all group/item">
@@ -435,7 +442,7 @@
         </div>
     </div>
 
-    <!-- Mobile Menu -->
+    <!-- Mobile Menu --
     <div id="mobileMenu" class="lg:hidden hidden border-t border-slate-200 absolute w-full bg-white/95 backdrop-blur-xl shadow-xl">
         <div class="container mx-auto px-4 py-6 flex flex-col gap-2">
             <a href="#services" onclick="toggleMobileMenu()" class="text-slate-800 font-bold py-3 border-b border-slate-100">Services</a>
@@ -457,7 +464,7 @@
             </button>
         </div>
     </div>
-   </nav>
+   </nav>-->
 
    <!-- ========================================== -->
    <!-- HERO SECTION -->
@@ -674,306 +681,316 @@
     </div>
    </section>
 
-   <!-- ========================================== -->
-   <!-- PROCESS SECTION (Light Premium Theme) -->
-   <!-- ========================================== -->
-   <section id="process" class="py-24 md:py-32 bg-slate-50 relative overflow-hidden selection:bg-nexus-purple selection:text-white">
-    <!-- Abstract Background Glowing Orbs & Grid -->
-    <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-        <div class="absolute top-[10%] right-[-10%] w-[40rem] h-[40rem] rounded-full bg-gradient-to-br from-blue-200/40 to-purple-200/40 blur-3xl animate-pulse-slow"></div>
-        <div class="absolute bottom-[-10%] left-[-10%] w-[30rem] h-[30rem] rounded-full bg-gradient-to-tr from-cyan-200/30 to-emerald-200/30 blur-3xl animate-float"></div>
-        <div class="absolute inset-0 grid-pattern opacity-[0.25]"></div>
-    </div>
-    
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="flex flex-col lg:flex-row gap-12 lg:gap-20">
-            
-            <!-- Left: Sticky Header Column -->
-            <div class="lg:w-1/3 lg:relative">
-                <div class="lg:sticky lg:top-32" data-aos="fade-right">
-                    <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border border-slate-200 shadow-sm mb-8">
-                        <span class="w-2 h-2 rounded-full bg-nexus-purple animate-ping absolute"></span>
-                        <span class="w-2 h-2 rounded-full bg-nexus-purple relative"></span>
-                        <span class="text-xs font-black text-slate-800 tracking-widest uppercase ml-2">How We Work</span>
-                    </div>
-                    <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 leading-[1.1] tracking-tight">
-                        Our <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-nexus-blue to-nexus-purple">Blueprint</span> <br>For Success.
-                    </h2>
-                    <p class="text-slate-600 text-lg font-medium leading-relaxed mb-10">
-                        A proven methodology that ensures every project succeeds. From initial strategy to final deployment.
-                    </p>
-                    
-                    <!-- Mini Success Rate Card -->
-                    <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] inline-block w-full max-w-sm">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="font-bold text-slate-800">Project Success Rate</span>
-                            <span class="font-black text-nexus-blue text-xl">99%</span>
-                        </div>
-                        <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
-                            <div class="bg-gradient-to-r from-nexus-blue to-nexus-purple h-full w-[99%] rounded-full relative">
-                                <div class="absolute right-0 top-0 h-full w-6 bg-white/40 animate-pulse blur-[2px]"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Right: Scrolling Process Steps -->
-            <div class="lg:w-2/3 relative">
-                <!-- Vertical Line connecting steps (Desktop only) -->
-                <div class="absolute left-[3.25rem] top-10 bottom-10 w-1 bg-gradient-to-b from-slate-200 via-slate-200 to-transparent hidden md:block rounded-full z-0">
-                    <!-- Animated glowing dot traveling down -->
-                    <div class="w-1 h-32 bg-gradient-to-b from-transparent via-nexus-blue to-transparent animate-scroll-down rounded-full absolute top-0 left-0 z-10"></div>
-                </div>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        nexus: {
+                            blue: '#2563eb',
+                            purple: '#8b5cf6',
+                            cyan: '#06b6d4',
+                            pink: '#ec4899',
+                            green: '#10b981',
+                            dark: '#0f172a'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'scroll-down': 'scrollDown 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite',
+                        'spin-slow': 'spin 8s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        scrollDown: {
+                            '0%': { transform: 'translateY(-100%)', opacity: 0 },
+                            '30%': { opacity: 1 },
+                            '70%': { opacity: 1 },
+                            '100%': { transform: 'translateY(100%)', opacity: 0 },
+                        }
+                    },
+                    backgroundImage: {
+                        'grid-pattern': `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm1 1h38v38H1V1z' fill='%2394a3b8' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E")`,
+                    }
+                }
+            }
+        }
+    </script>
 
-                <div class="space-y-8 md:space-y-12 pb-12">
-                    
-                    <!-- Step 1 -->
-                    <div class="relative flex flex-col md:flex-row gap-6 lg:gap-10 group" data-aos="fade-up" data-aos-delay="0">
-                        <div class="relative z-10 hidden md:flex items-start">
-                            <div class="w-24 h-24 rounded-[2rem] bg-white border-2 border-slate-100 shadow-xl flex items-center justify-center relative overflow-hidden group-hover:border-nexus-blue group-hover:scale-110 transition-all duration-500 shrink-0">
-                                <div class="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <span class="font-display font-black text-4xl text-slate-300 group-hover:text-nexus-blue transition-colors duration-500 relative z-10">01</span>
-                            </div>
-                        </div>
 
-                        <div class="flex-1 bg-white p-8 lg:p-10 rounded-[2.5rem] border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(37,99,235,0.08)] transition-all duration-500 relative overflow-hidden group-hover:-translate-y-2 group-hover:border-blue-200">
-                            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-blue-50 rounded-full blur-3xl group-hover:bg-blue-100 transition-colors duration-500 opacity-50 pointer-events-none"></div>
-                            <i class="fas fa-lightbulb absolute -bottom-6 -right-6 text-8xl text-slate-50 opacity-40 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none"></i>
-                            
-                            <div class="relative z-10">
-                                <div class="flex items-center justify-between mb-6">
-                                    <div class="w-14 h-14 rounded-2xl bg-blue-50 text-nexus-blue flex items-center justify-center text-2xl group-hover:bg-nexus-blue group-hover:text-white transition-all duration-500 shadow-sm md:hidden">
-                                        <span class="font-display font-black">01</span>
-                                    </div>
-                                    <div class="hidden md:flex w-14 h-14 rounded-2xl bg-blue-50 text-nexus-blue items-center justify-center text-2xl group-hover:bg-nexus-blue group-hover:text-white transition-all duration-500 shadow-sm">
-                                        <i class="fas fa-lightbulb"></i>
-                                    </div>
-                                    <span class="px-4 py-1.5 rounded-full bg-slate-100 text-slate-500 text-xs font-black uppercase tracking-widest group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">Phase 1</span>
-                                </div>
-                                
-                                <h3 class="font-display text-2xl lg:text-3xl font-black text-slate-900 mb-4 group-hover:text-nexus-blue transition-colors">Strategy & Planning</h3>
-                                <p class="text-slate-600 text-lg leading-relaxed mb-8 font-medium">
-                                    Understanding your goals, audience, and requirements to create a solid foundation. We analyze competitors and define success metrics.
-                                </p>
-                                
-                                <div class="flex flex-wrap gap-3">
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-blue-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Requirements Analysis</span>
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-blue-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Market Research</span>
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-blue-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div> Project Roadmap</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="relative flex flex-col md:flex-row gap-6 lg:gap-10 group" data-aos="fade-up" data-aos-delay="100">
-                        <div class="relative z-10 hidden md:flex items-start">
-                            <div class="w-24 h-24 rounded-[2rem] bg-white border-2 border-slate-100 shadow-xl flex items-center justify-center relative overflow-hidden group-hover:border-nexus-purple group-hover:scale-110 transition-all duration-500 shrink-0">
-                                <div class="absolute inset-0 bg-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <span class="font-display font-black text-4xl text-slate-300 group-hover:text-nexus-purple transition-colors duration-500 relative z-10">02</span>
-                            </div>
-                        </div>
-
-                        <div class="flex-1 bg-white p-8 lg:p-10 rounded-[2.5rem] border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(124,58,237,0.08)] transition-all duration-500 relative overflow-hidden group-hover:-translate-y-2 group-hover:border-purple-200">
-                            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-purple-50 rounded-full blur-3xl group-hover:bg-purple-100 transition-colors duration-500 opacity-50 pointer-events-none"></div>
-                            <i class="fas fa-pencil-ruler absolute -bottom-6 -right-6 text-8xl text-slate-50 opacity-40 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none"></i>
-                            
-                            <div class="relative z-10">
-                                <div class="flex items-center justify-between mb-6">
-                                    <div class="w-14 h-14 rounded-2xl bg-purple-50 text-nexus-purple flex items-center justify-center text-2xl group-hover:bg-nexus-purple group-hover:text-white transition-all duration-500 shadow-sm md:hidden">
-                                        <span class="font-display font-black">02</span>
-                                    </div>
-                                    <div class="hidden md:flex w-14 h-14 rounded-2xl bg-purple-50 text-nexus-purple items-center justify-center text-2xl group-hover:bg-nexus-purple group-hover:text-white transition-all duration-500 shadow-sm">
-                                        <i class="fas fa-pencil-ruler"></i>
-                                    </div>
-                                    <span class="px-4 py-1.5 rounded-full bg-slate-100 text-slate-500 text-xs font-black uppercase tracking-widest group-hover:bg-purple-50 group-hover:text-purple-600 transition-colors">Phase 2</span>
-                                </div>
-                                
-                                <h3 class="font-display text-2xl lg:text-3xl font-black text-slate-900 mb-4 group-hover:text-nexus-purple transition-colors">Design & UI/UX</h3>
-                                <p class="text-slate-600 text-lg leading-relaxed mb-8 font-medium">
-                                    Creating stunning, user-centric designs that convert visitors into customers. Wireframes to high-fidelity prototypes.
-                                </p>
-                                
-                                <div class="flex flex-wrap gap-3">
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-purple-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-purple-500"></div> Wireframing & Prototyping</span>
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-purple-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-purple-500"></div> Visual Design System</span>
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-purple-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-purple-500"></div> User Testing</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="relative flex flex-col md:flex-row gap-6 lg:gap-10 group" data-aos="fade-up" data-aos-delay="200">
-                        <div class="relative z-10 hidden md:flex items-start">
-                            <div class="w-24 h-24 rounded-[2rem] bg-white border-2 border-slate-100 shadow-xl flex items-center justify-center relative overflow-hidden group-hover:border-pink-500 group-hover:scale-110 transition-all duration-500 shrink-0">
-                                <div class="absolute inset-0 bg-pink-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <span class="font-display font-black text-4xl text-slate-300 group-hover:text-pink-500 transition-colors duration-500 relative z-10">03</span>
-                            </div>
-                        </div>
-
-                        <div class="flex-1 bg-white p-8 lg:p-10 rounded-[2.5rem] border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(236,72,153,0.08)] transition-all duration-500 relative overflow-hidden group-hover:-translate-y-2 group-hover:border-pink-200">
-                            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-pink-50 rounded-full blur-3xl group-hover:bg-pink-100 transition-colors duration-500 opacity-50 pointer-events-none"></div>
-                            <i class="fas fa-code absolute -bottom-6 -right-6 text-8xl text-slate-50 opacity-40 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none"></i>
-                            
-                            <div class="relative z-10">
-                                <div class="flex items-center justify-between mb-6">
-                                    <div class="w-14 h-14 rounded-2xl bg-pink-50 text-pink-500 flex items-center justify-center text-2xl group-hover:bg-pink-500 group-hover:text-white transition-all duration-500 shadow-sm md:hidden">
-                                        <span class="font-display font-black">03</span>
-                                    </div>
-                                    <div class="hidden md:flex w-14 h-14 rounded-2xl bg-pink-50 text-pink-500 items-center justify-center text-2xl group-hover:bg-pink-500 group-hover:text-white transition-all duration-500 shadow-sm">
-                                        <i class="fas fa-code"></i>
-                                    </div>
-                                    <span class="px-4 py-1.5 rounded-full bg-slate-100 text-slate-500 text-xs font-black uppercase tracking-widest group-hover:bg-pink-50 group-hover:text-pink-600 transition-colors">Phase 3</span>
-                                </div>
-                                
-                                <h3 class="font-display text-2xl lg:text-3xl font-black text-slate-900 mb-4 group-hover:text-pink-500 transition-colors">Development</h3>
-                                <p class="text-slate-600 text-lg leading-relaxed mb-8 font-medium">
-                                    Building robust, scalable solutions with clean, maintainable code. Agile sprints with regular updates.
-                                </p>
-                                
-                                <div class="flex flex-wrap gap-3">
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-pink-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-pink-500"></div> Frontend & Backend</span>
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-pink-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-pink-500"></div> Database Architecture</span>
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-pink-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-pink-500"></div> API Integration</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="relative flex flex-col md:flex-row gap-6 lg:gap-10 group" data-aos="fade-up" data-aos-delay="300">
-                        <div class="relative z-10 hidden md:flex items-start">
-                            <div class="w-24 h-24 rounded-[2rem] bg-white border-2 border-slate-100 shadow-xl flex items-center justify-center relative overflow-hidden group-hover:border-nexus-cyan group-hover:scale-110 transition-all duration-500 shrink-0">
-                                <div class="absolute inset-0 bg-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <span class="font-display font-black text-4xl text-slate-300 group-hover:text-nexus-cyan transition-colors duration-500 relative z-10">04</span>
-                            </div>
-                        </div>
-
-                        <div class="flex-1 bg-white p-8 lg:p-10 rounded-[2.5rem] border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(8,145,178,0.08)] transition-all duration-500 relative overflow-hidden group-hover:-translate-y-2 group-hover:border-cyan-200">
-                            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-cyan-50 rounded-full blur-3xl group-hover:bg-cyan-100 transition-colors duration-500 opacity-50 pointer-events-none"></div>
-                            <i class="fas fa-vial absolute -bottom-6 -right-6 text-8xl text-slate-50 opacity-40 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none"></i>
-                            
-                            <div class="relative z-10">
-                                <div class="flex items-center justify-between mb-6">
-                                    <div class="w-14 h-14 rounded-2xl bg-cyan-50 text-nexus-cyan flex items-center justify-center text-2xl group-hover:bg-nexus-cyan group-hover:text-white transition-all duration-500 shadow-sm md:hidden">
-                                        <span class="font-display font-black">04</span>
-                                    </div>
-                                    <div class="hidden md:flex w-14 h-14 rounded-2xl bg-cyan-50 text-nexus-cyan items-center justify-center text-2xl group-hover:bg-nexus-cyan group-hover:text-white transition-all duration-500 shadow-sm">
-                                        <i class="fas fa-vial"></i>
-                                    </div>
-                                    <span class="px-4 py-1.5 rounded-full bg-slate-100 text-slate-500 text-xs font-black uppercase tracking-widest group-hover:bg-cyan-50 group-hover:text-cyan-600 transition-colors">Phase 4</span>
-                                </div>
-                                
-                                <h3 class="font-display text-2xl lg:text-3xl font-black text-slate-900 mb-4 group-hover:text-nexus-cyan transition-colors">Testing & QA</h3>
-                                <p class="text-slate-600 text-lg leading-relaxed mb-8 font-medium">
-                                    Rigorous testing to ensure flawless performance across all devices and browsers. Automated + Manual testing.
-                                </p>
-                                
-                                <div class="flex flex-wrap gap-3">
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-cyan-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500"></div> Functional Testing</span>
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-cyan-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500"></div> Performance Optimization</span>
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-cyan-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500"></div> Security Audits</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 5 -->
-                    <div class="relative flex flex-col md:flex-row gap-6 lg:gap-10 group" data-aos="fade-up" data-aos-delay="400">
-                        <div class="relative z-10 hidden md:flex items-start">
-                            <div class="w-24 h-24 rounded-[2rem] bg-white border-2 border-slate-100 shadow-xl flex items-center justify-center relative overflow-hidden group-hover:border-green-500 group-hover:scale-110 transition-all duration-500 shrink-0">
-                                <div class="absolute inset-0 bg-green-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <span class="font-display font-black text-4xl text-slate-300 group-hover:text-green-500 transition-colors duration-500 relative z-10">05</span>
-                            </div>
-                        </div>
-
-                        <div class="flex-1 bg-white p-8 lg:p-10 rounded-[2.5rem] border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(34,197,94,0.08)] transition-all duration-500 relative overflow-hidden group-hover:-translate-y-2 group-hover:border-green-200">
-                            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-green-50 rounded-full blur-3xl group-hover:bg-green-100 transition-colors duration-500 opacity-50 pointer-events-none"></div>
-                            <i class="fas fa-rocket absolute -bottom-6 -right-6 text-8xl text-slate-50 opacity-40 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none"></i>
-                            
-                            <div class="relative z-10">
-                                <div class="flex items-center justify-between mb-6">
-                                    <div class="w-14 h-14 rounded-2xl bg-green-50 text-green-500 flex items-center justify-center text-2xl group-hover:bg-green-500 group-hover:text-white transition-all duration-500 shadow-sm md:hidden">
-                                        <span class="font-display font-black">05</span>
-                                    </div>
-                                    <div class="hidden md:flex w-14 h-14 rounded-2xl bg-green-50 text-green-500 items-center justify-center text-2xl group-hover:bg-green-500 group-hover:text-white transition-all duration-500 shadow-sm">
-                                        <i class="fas fa-rocket"></i>
-                                    </div>
-                                    <span class="px-4 py-1.5 rounded-full bg-slate-100 text-slate-500 text-xs font-black uppercase tracking-widest group-hover:bg-green-50 group-hover:text-green-600 transition-colors">Phase 5</span>
-                                </div>
-                                
-                                <h3 class="font-display text-2xl lg:text-3xl font-black text-slate-900 mb-4 group-hover:text-green-500 transition-colors">Launch & Optimization</h3>
-                                <p class="text-slate-600 text-lg leading-relaxed mb-8 font-medium">
-                                    Deploying your project and continuous optimization for peak performance. Monitoring and analytics setup.
-                                </p>
-                                
-                                <div class="flex flex-wrap gap-3">
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-green-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-green-500"></div> CI/CD Deployment</span>
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-green-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-green-500"></div> Analytics Setup</span>
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-green-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-green-500"></div> SEO Optimization</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 6 -->
-                    <div class="relative flex flex-col md:flex-row gap-6 lg:gap-10 group" data-aos="fade-up" data-aos-delay="500">
-                        <div class="relative z-10 hidden md:flex items-start">
-                            <div class="w-24 h-24 rounded-[2rem] bg-white border-2 border-slate-100 shadow-xl flex items-center justify-center relative overflow-hidden group-hover:border-emerald-500 group-hover:scale-110 transition-all duration-500 shrink-0">
-                                <div class="absolute inset-0 bg-emerald-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <span class="font-display font-black text-4xl text-slate-300 group-hover:text-emerald-500 transition-colors duration-500 relative z-10">06</span>
-                            </div>
-                        </div>
-
-                        <div class="flex-1 bg-white p-8 lg:p-10 rounded-[2.5rem] border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(16,185,129,0.08)] transition-all duration-500 relative overflow-hidden group-hover:-translate-y-2 group-hover:border-emerald-200">
-                            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-emerald-50 rounded-full blur-3xl group-hover:bg-emerald-100 transition-colors duration-500 opacity-50 pointer-events-none"></div>
-                            <i class="fas fa-robot absolute -bottom-6 -right-6 text-8xl text-slate-50 opacity-40 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none"></i>
-                            
-                            <div class="relative z-10">
-                                <div class="flex items-center justify-between mb-6">
-                                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-500 flex items-center justify-center text-2xl group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm md:hidden">
-                                        <span class="font-display font-black">06</span>
-                                    </div>
-                                    <div class="hidden md:flex w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-500 items-center justify-center text-2xl group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm">
-                                        <i class="fas fa-robot"></i>
-                                    </div>
-                                    <div class="flex items-center gap-3">
-                                        <span class="px-3 py-1 rounded-full bg-slate-800 text-white text-[10px] font-bold uppercase tracking-widest shadow-sm">Optional</span>
-                                        <span class="px-4 py-1.5 rounded-full bg-slate-100 text-slate-500 text-xs font-black uppercase tracking-widest group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors">Phase 6</span>
-                                    </div>
-                                </div>
-                                
-                                <h3 class="font-display text-2xl lg:text-3xl font-black text-slate-900 mb-4 group-hover:text-emerald-500 transition-colors">AI Integration</h3>
-                                <p class="text-slate-600 text-lg leading-relaxed mb-8 font-medium">
-                                    Adding intelligent features like chatbots, automation, and predictive analytics to supercharge your product.
-                                </p>
-                                
-                                <div class="flex flex-wrap gap-3">
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-emerald-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div> Chatbots & Assistants</span>
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-emerald-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div> Process Automation</span>
-                                    <span class="px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-700 flex items-center gap-2 border border-slate-100 group-hover:border-emerald-100 transition-colors"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div> Predictive Analytics</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+    <!-- ========================================== -->
+    <!-- PROCESS SECTION START -->
+    <!-- ========================================== -->
+    <section id="process" class="py-20 md:py-32 bg-slate-50 relative overflow-hidden selection:bg-nexus-purple selection:text-white">
+        
+        <!-- Abstract Background Effects -->
+        <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+            <div class="absolute top-[-10%] right-[-5%] w-[30rem] h-[30rem] rounded-full bg-gradient-to-br from-blue-400/20 to-purple-400/20 blur-[100px] animate-pulse-slow"></div>
+            <div class="absolute bottom-[10%] left-[-10%] w-[25rem] h-[25rem] rounded-full bg-gradient-to-tr from-cyan-400/20 to-emerald-400/20 blur-[100px] animate-float"></div>
+            <div class="absolute inset-0 bg-grid-pattern [mask-image:linear-gradient(to_bottom,white,transparent,white)]"></div>
         </div>
         
-        <!-- Timeline End Indicator / Support Pill -->
-        <div class="flex justify-center mt-8 relative z-20" data-aos="fade-up">
-            <div class="bg-white px-8 py-5 rounded-full flex items-center gap-4 text-slate-700 font-bold border border-slate-200 shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(37,99,235,0.15)] hover:border-blue-200 transition-all duration-300 cursor-default transform hover:-translate-y-1">
-                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-nexus-blue">
-                    <i class="fas fa-infinity text-lg animate-pulse"></i>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
+                
+                <!-- Left Column: Sticky Header -->
+                <div class="lg:w-1/3 lg:relative">
+                    <div class="lg:sticky lg:top-32" data-aos="fade-right" data-aos-duration="1000">
+                        
+                        <!-- Badge -->
+                        <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border border-slate-200 shadow-sm mb-8 relative group cursor-default">
+                            <div class="absolute inset-0 bg-gradient-to-r from-nexus-blue to-nexus-purple opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                            <span class="flex h-3 w-3 relative">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-nexus-purple opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-3 w-3 bg-nexus-purple"></span>
+                            </span>
+                            <span class="text-xs font-bold text-slate-800 tracking-widest uppercase">How We Work</span>
+                        </div>
+                        
+                        <!-- Heading -->
+                        <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 mb-6 leading-[1.1] tracking-tight">
+                            Our <br class="hidden lg:block">
+                            <span class="relative inline-block">
+                                <span class="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-nexus-blue via-nexus-purple to-nexus-pink">Blueprint</span>
+                                <div class="absolute bottom-2 left-0 w-full h-3 bg-nexus-blue/10 -z-10 -rotate-2"></div>
+                            </span> 
+                            <br class="hidden lg:block">For Success.
+                        </h2>
+                        
+                        <p class="text-slate-600 text-lg font-medium leading-relaxed mb-10">
+                            A battle-tested methodology designed to eliminate risks, accelerate delivery, and ensure your project exceeds expectations.
+                        </p>
+                        
+                        <!-- Mini Success Rate Card -->
+                        <div class="bg-white/80 backdrop-blur-md p-6 rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50 inline-block w-full max-w-sm relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-nexus-blue/10 to-transparent rounded-bl-full pointer-events-none"></div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-base font-bold text-slate-800">Project Success Rate</span>
+                                <span class="font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-nexus-blue to-nexus-purple text-2xl">99%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden p-0.5">
+                                <div class="bg-gradient-to-r from-nexus-blue to-nexus-purple h-full w-[99%] rounded-full relative overflow-hidden">
+                                    <div class="absolute inset-0 bg-white/20 w-full h-full animate-[scroll-down_2s_ease-in-out_infinite] rotate-45 scale-[3]"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <span class="text-lg">Continuous Support & Maintenance</span>
+
+                <!-- Right Column: Process Timeline -->
+                <div class="lg:w-2/3 relative">
+                    
+                    <!-- Timeline Wrapper -->
+                    <div class="relative w-full flex gap-6 md:gap-10">
+                        
+                        <!-- The Continuous Glow Line -->
+                        <div class="absolute left-[27px] md:left-[39px] top-6 bottom-10 w-1.5 md:w-2 rounded-full bg-slate-200/60 z-0 overflow-hidden">
+                            <div class="w-full h-[30%] bg-gradient-to-b from-transparent via-nexus-blue to-transparent rounded-full animate-scroll-down opacity-80"></div>
+                        </div>
+
+                        <!-- Step Stack -->
+                        <div class="w-full flex flex-col space-y-10 md:space-y-16 pb-4">
+                            
+                            <!-- Phase 1 -->
+                            <div class="relative flex items-start gap-5 md:gap-10 group" data-aos="fade-up" data-aos-duration="800">
+                                <!-- Node -->
+                                <div class="relative z-10 w-14 h-14 md:w-20 md:h-20 shrink-0 rounded-2xl md:rounded-[1.5rem] bg-white border-[3px] border-slate-100 flex items-center justify-center shadow-lg shadow-slate-200/50 group-hover:border-nexus-blue group-hover:shadow-nexus-blue/20 transition-all duration-500 rotate-3 group-hover:rotate-0">
+                                    <span class="font-display text-xl md:text-3xl font-black text-slate-300 group-hover:text-nexus-blue transition-colors duration-500">01</span>
+                                    <div class="absolute inset-0 rounded-2xl md:rounded-[1.5rem] bg-nexus-blue/5 scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+                                </div>
+                                
+                                <!-- Card -->
+                                <div class="flex-1 bg-white p-6 md:p-8 lg:p-10 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(37,99,235,0.15)] transition-all duration-500 relative overflow-hidden md:group-hover:-translate-y-1">
+                                    <div class="absolute right-0 top-0 w-64 h-64 bg-gradient-to-bl from-nexus-blue/5 to-transparent rounded-bl-[100%] pointer-events-none transition-opacity opacity-0 group-hover:opacity-100 duration-700"></div>
+                                    <i class="fas fa-lightbulb absolute -right-6 -bottom-6 text-[8rem] text-slate-50 group-hover:text-nexus-blue/5 transition-all duration-700 transform group-hover:-rotate-12 pointer-events-none"></i>
+                                    
+                                    <div class="relative z-10">
+                                        <div class="flex flex-wrap items-center gap-3 mb-5">
+                                            <div class="w-12 h-12 rounded-2xl bg-slate-50 text-nexus-blue flex items-center justify-center text-xl group-hover:bg-nexus-blue group-hover:text-white transition-all duration-500 shadow-inner">
+                                                <i class="fas fa-lightbulb"></i>
+                                            </div>
+                                            <span class="px-4 py-1.5 rounded-full bg-slate-100 text-slate-500 text-xs font-black uppercase tracking-wider group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">Strategy</span>
+                                        </div>
+                                        
+                                        <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-3 group-hover:text-nexus-blue transition-colors">Discovery & Planning</h3>
+                                        <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-6">
+                                            We start by deeply understanding your business goals, target audience, and technical constraints to build an unshakeable foundation.
+                                        </p>
+                                        
+                                        <div class="flex flex-wrap gap-2.5">
+                                            <span class="px-3 py-1.5 bg-slate-50 rounded-lg text-sm font-semibold text-slate-600 border border-slate-100 group-hover:border-blue-100 group-hover:text-blue-700 transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-nexus-blue"></div> Market Research</span>
+                                            <span class="px-3 py-1.5 bg-slate-50 rounded-lg text-sm font-semibold text-slate-600 border border-slate-100 group-hover:border-blue-100 group-hover:text-blue-700 transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-nexus-blue"></div> Project Roadmap</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Phase 2 -->
+                            <div class="relative flex items-start gap-5 md:gap-10 group" data-aos="fade-up" data-aos-duration="800">
+                                <div class="relative z-10 w-14 h-14 md:w-20 md:h-20 shrink-0 rounded-2xl md:rounded-[1.5rem] bg-white border-[3px] border-slate-100 flex items-center justify-center shadow-lg shadow-slate-200/50 group-hover:border-nexus-purple group-hover:shadow-nexus-purple/20 transition-all duration-500 -rotate-3 group-hover:rotate-0">
+                                    <span class="font-display text-xl md:text-3xl font-black text-slate-300 group-hover:text-nexus-purple transition-colors duration-500">02</span>
+                                    <div class="absolute inset-0 rounded-2xl md:rounded-[1.5rem] bg-nexus-purple/5 scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+                                </div>
+                                
+                                <div class="flex-1 bg-white p-6 md:p-8 lg:p-10 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(139,92,246,0.15)] transition-all duration-500 relative overflow-hidden md:group-hover:-translate-y-1">
+                                    <div class="absolute right-0 top-0 w-64 h-64 bg-gradient-to-bl from-nexus-purple/5 to-transparent rounded-bl-[100%] pointer-events-none transition-opacity opacity-0 group-hover:opacity-100 duration-700"></div>
+                                    <i class="fas fa-bezier-curve absolute -right-6 -bottom-6 text-[8rem] text-slate-50 group-hover:text-nexus-purple/5 transition-all duration-700 transform group-hover:rotate-12 pointer-events-none"></i>
+                                    
+                                    <div class="relative z-10">
+                                        <div class="flex flex-wrap items-center gap-3 mb-5">
+                                            <div class="w-12 h-12 rounded-2xl bg-slate-50 text-nexus-purple flex items-center justify-center text-xl group-hover:bg-nexus-purple group-hover:text-white transition-all duration-500 shadow-inner">
+                                                <i class="fas fa-bezier-curve"></i>
+                                            </div>
+                                            <span class="px-4 py-1.5 rounded-full bg-slate-100 text-slate-500 text-xs font-black uppercase tracking-wider group-hover:bg-purple-50 group-hover:text-purple-600 transition-colors">Design</span>
+                                        </div>
+                                        
+                                        <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-3 group-hover:text-nexus-purple transition-colors">UI/UX Prototyping</h3>
+                                        <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-6">
+                                            Crafting intuitive, stunning interfaces. We build interactive prototypes so you can experience the user journey before writing a single line of code.
+                                        </p>
+                                        
+                                        <div class="flex flex-wrap gap-2.5">
+                                            <span class="px-3 py-1.5 bg-slate-50 rounded-lg text-sm font-semibold text-slate-600 border border-slate-100 group-hover:border-purple-100 group-hover:text-purple-700 transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-nexus-purple"></div> Wireframes</span>
+                                            <span class="px-3 py-1.5 bg-slate-50 rounded-lg text-sm font-semibold text-slate-600 border border-slate-100 group-hover:border-purple-100 group-hover:text-purple-700 transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-nexus-purple"></div> Visual Identity</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Phase 3 -->
+                            <div class="relative flex items-start gap-5 md:gap-10 group" data-aos="fade-up" data-aos-duration="800">
+                                <div class="relative z-10 w-14 h-14 md:w-20 md:h-20 shrink-0 rounded-2xl md:rounded-[1.5rem] bg-white border-[3px] border-slate-100 flex items-center justify-center shadow-lg shadow-slate-200/50 group-hover:border-nexus-pink group-hover:shadow-nexus-pink/20 transition-all duration-500 rotate-3 group-hover:rotate-0">
+                                    <span class="font-display text-xl md:text-3xl font-black text-slate-300 group-hover:text-nexus-pink transition-colors duration-500">03</span>
+                                    <div class="absolute inset-0 rounded-2xl md:rounded-[1.5rem] bg-nexus-pink/5 scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+                                </div>
+                                
+                                <div class="flex-1 bg-white p-6 md:p-8 lg:p-10 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(236,72,153,0.15)] transition-all duration-500 relative overflow-hidden md:group-hover:-translate-y-1">
+                                    <div class="absolute right-0 top-0 w-64 h-64 bg-gradient-to-bl from-nexus-pink/5 to-transparent rounded-bl-[100%] pointer-events-none transition-opacity opacity-0 group-hover:opacity-100 duration-700"></div>
+                                    <i class="fas fa-code absolute -right-6 -bottom-6 text-[8rem] text-slate-50 group-hover:text-nexus-pink/5 transition-all duration-700 transform group-hover:-rotate-12 pointer-events-none"></i>
+                                    
+                                    <div class="relative z-10">
+                                        <div class="flex flex-wrap items-center gap-3 mb-5">
+                                            <div class="w-12 h-12 rounded-2xl bg-slate-50 text-nexus-pink flex items-center justify-center text-xl group-hover:bg-nexus-pink group-hover:text-white transition-all duration-500 shadow-inner">
+                                                <i class="fas fa-code"></i>
+                                            </div>
+                                            <span class="px-4 py-1.5 rounded-full bg-slate-100 text-slate-500 text-xs font-black uppercase tracking-wider group-hover:bg-pink-50 group-hover:text-pink-600 transition-colors">Development</span>
+                                        </div>
+                                        
+                                        <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-3 group-hover:text-nexus-pink transition-colors">Agile Engineering</h3>
+                                        <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-6">
+                                            Our engineers turn designs into pixel-perfect, highly scalable code. We build robust front-ends and secure, lightning-fast backends.
+                                        </p>
+                                        
+                                        <div class="flex flex-wrap gap-2.5">
+                                            <span class="px-3 py-1.5 bg-slate-50 rounded-lg text-sm font-semibold text-slate-600 border border-slate-100 group-hover:border-pink-100 group-hover:text-pink-700 transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-nexus-pink"></div> React / Next.js</span>
+                                            <span class="px-3 py-1.5 bg-slate-50 rounded-lg text-sm font-semibold text-slate-600 border border-slate-100 group-hover:border-pink-100 group-hover:text-pink-700 transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-nexus-pink"></div> Custom APIs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Phase 4 -->
+                            <div class="relative flex items-start gap-5 md:gap-10 group" data-aos="fade-up" data-aos-duration="800">
+                                <div class="relative z-10 w-14 h-14 md:w-20 md:h-20 shrink-0 rounded-2xl md:rounded-[1.5rem] bg-white border-[3px] border-slate-100 flex items-center justify-center shadow-lg shadow-slate-200/50 group-hover:border-nexus-cyan group-hover:shadow-nexus-cyan/20 transition-all duration-500 -rotate-3 group-hover:rotate-0">
+                                    <span class="font-display text-xl md:text-3xl font-black text-slate-300 group-hover:text-nexus-cyan transition-colors duration-500">04</span>
+                                    <div class="absolute inset-0 rounded-2xl md:rounded-[1.5rem] bg-nexus-cyan/5 scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+                                </div>
+                                
+                                <div class="flex-1 bg-white p-6 md:p-8 lg:p-10 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(6,182,212,0.15)] transition-all duration-500 relative overflow-hidden md:group-hover:-translate-y-1">
+                                    <div class="absolute right-0 top-0 w-64 h-64 bg-gradient-to-bl from-nexus-cyan/5 to-transparent rounded-bl-[100%] pointer-events-none transition-opacity opacity-0 group-hover:opacity-100 duration-700"></div>
+                                    <i class="fas fa-bug-slash absolute -right-6 -bottom-6 text-[8rem] text-slate-50 group-hover:text-nexus-cyan/5 transition-all duration-700 transform group-hover:rotate-12 pointer-events-none"></i>
+                                    
+                                    <div class="relative z-10">
+                                        <div class="flex flex-wrap items-center gap-3 mb-5">
+                                            <div class="w-12 h-12 rounded-2xl bg-slate-50 text-nexus-cyan flex items-center justify-center text-xl group-hover:bg-nexus-cyan group-hover:text-white transition-all duration-500 shadow-inner">
+                                                <i class="fas fa-bug-slash"></i>
+                                            </div>
+                                            <span class="px-4 py-1.5 rounded-full bg-slate-100 text-slate-500 text-xs font-black uppercase tracking-wider group-hover:bg-cyan-50 group-hover:text-cyan-600 transition-colors">QA Check</span>
+                                        </div>
+                                        
+                                        <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-3 group-hover:text-nexus-cyan transition-colors">Rigorous Testing</h3>
+                                        <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-6">
+                                            We leave nothing to chance. Comprehensive automated and manual testing ensures flawless performance across all devices and browsers.
+                                        </p>
+                                        
+                                        <div class="flex flex-wrap gap-2.5">
+                                            <span class="px-3 py-1.5 bg-slate-50 rounded-lg text-sm font-semibold text-slate-600 border border-slate-100 group-hover:border-cyan-100 group-hover:text-cyan-700 transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-nexus-cyan"></div> Cross-Browser</span>
+                                            <span class="px-3 py-1.5 bg-slate-50 rounded-lg text-sm font-semibold text-slate-600 border border-slate-100 group-hover:border-cyan-100 group-hover:text-cyan-700 transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-nexus-cyan"></div> Security Audit</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Phase 5 -->
+                            <div class="relative flex items-start gap-5 md:gap-10 group" data-aos="fade-up" data-aos-duration="800">
+                                <div class="relative z-10 w-14 h-14 md:w-20 md:h-20 shrink-0 rounded-2xl md:rounded-[1.5rem] bg-white border-[3px] border-slate-100 flex items-center justify-center shadow-lg shadow-slate-200/50 group-hover:border-nexus-green group-hover:shadow-nexus-green/20 transition-all duration-500 rotate-3 group-hover:rotate-0">
+                                    <span class="font-display text-xl md:text-3xl font-black text-slate-300 group-hover:text-nexus-green transition-colors duration-500">05</span>
+                                    <div class="absolute inset-0 rounded-2xl md:rounded-[1.5rem] bg-nexus-green/5 scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+                                </div>
+                                
+                                <div class="flex-1 bg-white p-6 md:p-8 lg:p-10 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.15)] transition-all duration-500 relative overflow-hidden md:group-hover:-translate-y-1">
+                                    <div class="absolute right-0 top-0 w-64 h-64 bg-gradient-to-bl from-nexus-green/5 to-transparent rounded-bl-[100%] pointer-events-none transition-opacity opacity-0 group-hover:opacity-100 duration-700"></div>
+                                    <i class="fas fa-rocket absolute -right-6 -bottom-6 text-[8rem] text-slate-50 group-hover:text-nexus-green/5 transition-all duration-700 transform group-hover:-rotate-12 pointer-events-none"></i>
+                                    
+                                    <div class="relative z-10">
+                                        <div class="flex flex-wrap items-center gap-3 mb-5">
+                                            <div class="w-12 h-12 rounded-2xl bg-slate-50 text-nexus-green flex items-center justify-center text-xl group-hover:bg-nexus-green group-hover:text-white transition-all duration-500 shadow-inner">
+                                                <i class="fas fa-rocket"></i>
+                                            </div>
+                                            <span class="px-4 py-1.5 rounded-full bg-slate-100 text-slate-500 text-xs font-black uppercase tracking-wider group-hover:bg-green-50 group-hover:text-green-600 transition-colors">Launch</span>
+                                        </div>
+                                        
+                                        <h3 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-3 group-hover:text-nexus-green transition-colors">Deployment & SEO</h3>
+                                        <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-6">
+                                            Taking your project live on global infrastructure. We configure SEO, analytics, and optimize assets to ensure maximum visibility from Day 1.
+                                        </p>
+                                        
+                                        <div class="flex flex-wrap gap-2.5">
+                                            <span class="px-3 py-1.5 bg-slate-50 rounded-lg text-sm font-semibold text-slate-600 border border-slate-100 group-hover:border-green-100 group-hover:text-green-700 transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-nexus-green"></div> CI/CD Pipeline</span>
+                                            <span class="px-3 py-1.5 bg-slate-50 rounded-lg text-sm font-semibold text-slate-600 border border-slate-100 group-hover:border-green-100 group-hover:text-green-700 transition-colors flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-nexus-green"></div> SEO Optimization</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
+            
+            <!-- Bottom Call to Action / Support Tag -->
+            <div class="flex justify-center mt-12 md:mt-16 relative z-20" data-aos="fade-up" data-aos-duration="1000">
+                <div class="group relative bg-white px-2 py-2 pr-6 md:pr-8 rounded-full flex items-center gap-4 border border-slate-200 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:border-nexus-blue/30 transition-all duration-300 md:hover:-translate-y-1 cursor-pointer overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-r from-nexus-blue/5 to-nexus-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-nexus-blue to-nexus-purple flex items-center justify-center text-white shrink-0 shadow-inner relative z-10">
+                        <i class="fas fa-infinity text-base md:text-lg animate-pulse"></i>
+                    </div>
+                    <span class="text-sm md:text-lg text-slate-800 font-bold relative z-10 group-hover:text-nexus-blue transition-colors">Continuous Maintenance & Support</span>
+                    <i class="fas fa-arrow-right text-slate-400 text-sm group-hover:text-nexus-blue group-hover:translate-x-1 transition-all relative z-10"></i>
+                </div>
+            </div>
+            
         </div>
-    </div>
-   </section>
+    </section>
+
+    <!-- AOS JS Setup -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+            easing: 'ease-out-cubic',
+        });
+    </script>
 
    <!-- ========================================== -->
    <!-- PORTFOLIO SECTION -->
@@ -1270,9 +1287,11 @@
     </div>
    </section>
 
+
+    <div id="footer"></div>
    <!-- ========================================== -->
    <!-- FOOTER - Complete Working Version -->
-   <!-- ========================================== -->
+   <!-- ========================================== --
    <footer class="relative bg-slate-950 pt-20 pb-10 overflow-hidden">
     <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
     
@@ -1415,7 +1434,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer>-->
 
    <!-- ========================================== -->
    <!-- FLOATING ACTION BUTTONS -->
@@ -2605,5 +2624,33 @@
         renderBlog();
     });
    </script>
+    <script>
+        // Header load karo
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Header not found');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                
+                // Header load hone ke baad uske scripts initialize karo
+                if (typeof initHeaderScripts === 'function') {
+                    initHeaderScripts();
+                }
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+                document.getElementById('header').innerHTML = '<p style="color:red">Header load failed</p>';
+            });
+
+        // Footer load karo (agar alag file ho)
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => console.error('Footer load error:', error));
+    </script>
 </body>
 </html>
