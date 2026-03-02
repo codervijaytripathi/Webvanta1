@@ -1,5 +1,4 @@
-
-fetch('../footer.html')
+fetch('/footer.html')
   .then(response => {
     if (!response.ok) throw new Error('Footer not found');
     return response.text();
