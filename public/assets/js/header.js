@@ -1,5 +1,9 @@
-fetch('header.html')
-  .then(res => res.text())
+fetch('../header.html')
+  .then(response => {
+    if (!response.ok) throw new Error('Header not found');
+    return response.text();
+  })
   .then(html => {
     document.getElementById('header-placeholder').innerHTML = html;
-  });
+  })
+  .catch(err => console.error('Header load error:', err));
