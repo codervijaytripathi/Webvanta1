@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions | WebVanta</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Outfit (clean & modern) -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: #f8faff; /* very light blue background */
+      color: #1e293b;
+      line-height: 1.6;
+      padding: 2rem 1.5rem;
+    }
+    .terms-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 2.5rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(148, 163, 184, 0.1) inset;
+      padding: 3rem 2.5rem;
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+
+    /* header with logo & title */
+    .terms-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 1.5rem;
+    }
+    .logo-mark {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #22d3ee, #4f46e5);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 700;
+      box-shadow: 0 10px 20px -5px rgba(79, 70, 229, 0.3);
+    }
+    .terms-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #1e293b, #3b3f8f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* last updated badge */
+    .updated-badge {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      border: 1px solid #bae6fd;
+    }
+
+    /* section styling */
+    .terms-section {
+      margin-bottom: 2.2rem;
+    }
+    .terms-section h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .terms-section h2 i {
+      color: #4f46e5;
+      font-size: 1.4rem;
+      width: 2rem;
+    }
+    .terms-section p {
+      color: #334155;
+      font-weight: 300;
+      margin-bottom: 1rem;
+      padding-left: 2.6rem;
+    }
+    .terms-section ul {
+      padding-left: 4rem;
+      list-style-type: none;
+      margin-bottom: 1rem;
+    }
+    .terms-section li {
+      margin-bottom: 0.5rem;
+      color: #334155;
+      font-weight: 300;
+      display: flex;
+      align-items: baseline;
+      gap: 0.8rem;
+    }
+    .terms-section li i {
+      color: #22d3ee;
+      font-size: 0.8rem;
+      margin-top: 0.4rem;
+    }
+
+    /* contact box */
+    .contact-box {
+      background: #f1f5f9;
+      border-radius: 1.5rem;
+      padding: 1.8rem 2rem;
+      margin-top: 2.5rem;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .contact-box p {
+      font-weight: 400;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .contact-box i {
+      color: #4f46e5;
+      font-size: 1.8rem;
+    }
+    .contact-email {
+      background: white;
+      padding: 0.6rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 600;
+      color: #0f172a;
+      text-decoration: none;
+      border: 1px solid #cbd5e1;
+      transition: all 0.2s;
+    }
+    .contact-email:hover {
+      background: #4f46e5;
+      color: white;
+      border-color: #4f46e5;
+    }
+
+    /* footer */
+    .terms-footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: #64748b;
+      font-size: 0.95rem;
+      border-top: 1px dashed #cbd5e1;
+      padding-top: 2rem;
+    }
+
+    /* responsive */
+    @media (max-width: 640px) {
+      .terms-container {
+        padding: 2rem 1.5rem;
+      }
+      .terms-header h1 {
+        font-size: 2rem;
+      }
+      .terms-section h2 {
+        font-size: 1.4rem;
+      }
+      .terms-section p, .terms-section ul {
+        padding-left: 1.5rem;
+      }
+      .contact-box {
+        flex-direction: column;
+        gap: 1.2rem;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="terms-container">
+    <!-- header with logo -->
+    <div class="terms-header">
+      <div class="logo-mark">W</div>
+      <h1>Terms & Conditions</h1>
+    </div>
+
+    <!-- last updated -->
+    <div class="updated-badge">
+      <i class="far fa-calendar-alt" style="margin-right: 6px;"></i> Last Updated: March 3, 2026
+    </div>
+
+    <!-- introduction -->
+    <div class="terms-section">
+      <h2><i class="fas fa-chevron-circle-right"></i> Agreement to Terms</h2>
+      <p>By accessing or using the WebVanta website and services, you agree to be bound by these Terms and Conditions. If you disagree with any part, you may not access our services. These terms apply to all visitors, users, and clients.</p>
+    </div>
+
+    <!-- use of website -->
+    <div class="terms-section">
+      <h2><i class="fas fa-globe"></i> Use of Website & Services</h2>
+      <p>WebVanta grants you a limited, non-exclusive, non-transferable license to use our website and services for lawful purposes only. You agree not to:</p>
+      <ul>
+        <li><i class="fas fa-circle"></i> Violate any applicable laws or regulations.</li>
+        <li><i class="fas fa-circle"></i> Infringe upon intellectual property rights.</li>
+        <li><i class="fas fa-circle"></i> Distribute malware or harmful content.</li>
+        <li><i class="fas fa-circle"></i> Attempt to gain unauthorized access to our systems.</li>
+      </ul>
+    </div>
+
+    <!-- intellectual property -->
+    <div class="terms-section">
+      <h2><i class="fas fa-copyright"></i> Intellectual Property</h2>
+      <p>All content on this site—including logos, text, graphics, code, and software—is the property of WebVanta or its licensors and is protected by copyright and trademark laws. You may not reproduce, distribute, or create derivative works without our explicit written consent.</p>
+    </div>
+
+    <!-- user accounts -->
+    <div class="terms-section">
+      <h2><i class="fas fa-user-circle"></i> User Accounts</h2>
+      <p>If you create an account with us, you are responsible for maintaining the security of your account and for all activities under it. You must provide accurate and complete information. We reserve the right to suspend or terminate accounts at our discretion.</p>
+    </div>
+
+    <!-- payments & fees -->
+    <div class="terms-section">
+      <h2><i class="fas fa-credit-card"></i> Payments & Fees</h2>
+      <p>Certain services may require payment. All fees are non-refundable unless otherwise stated. We accept payment methods as indicated on our site. Prices are subject to change with notice. You agree to pay all charges incurred.</p>
+    </div>
+
+    <!-- limitation of liability -->
+    <div class="terms-section">
+      <h2><i class="fas fa-exclamation-triangle"></i> Limitation of Liability</h2>
+      <p>WebVanta shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of our services. Our total liability, whether in contract, warranty, or tort, shall not exceed the amount you paid us during the six months prior to the event giving rise to liability.</p>
+    </div>
+
+    <!-- governing law -->
+    <div class="terms-section">
+      <h2><i class="fas fa-gavel"></i> Governing Law</h2>
+      <p>These Terms shall be governed by the laws of [Your Country/State], without regard to its conflict of law provisions. Any legal action shall be brought exclusively in the courts of [Your City/Region].</p>
+    </div>
+
+    <!-- changes to terms -->
+    <div class="terms-section">
+      <h2><i class="fas fa-sync-alt"></i> Changes to Terms</h2>
+      <p>We may update these Terms from time to time. We will notify you of any changes by posting the new Terms on this page with an updated "Last Updated" date. Continued use of the service after changes constitutes acceptance.</p>
+    </div>
+
+    <!-- contact information -->
+    <div class="contact-box">
+      <p>
+        <i class="fas fa-envelope-open-text"></i>
+        Questions about our Terms? Let's talk.
+      </p>
+      <a href="mailto:legal@webvanta.com" class="contact-email">
+        <i class="far fa-paper-plane" style="margin-right: 6px;"></i> legal@webvanta.com
+      </a>
+    </div>
+
+    <!-- footer -->
+    <div class="terms-footer">
+      © 2026 WebVanta Intelligence Agency. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
