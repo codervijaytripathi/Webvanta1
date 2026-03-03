@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Luminary | ultra-premium</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Outfit + Playfair Display for ultra premium -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <!-- vanilla tilt library for 3D hover (lightweight) -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: #0b0c15;
+      color: #e9ecf5;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* animated particle background (canvas) */
+    #particle-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* main card – ultra glassmorphism */
+    .about-orb {
+      max-width: 1400px;
+      width: 100%;
+      background: rgba(15, 18, 30, 0.45);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-radius: 4rem;
+      box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(120, 140, 255, 0.2) inset, 0 0 40px rgba(88, 130, 255, 0.2);
+      padding: 3.5rem 3rem;
+      z-index: 10;
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: box-shadow 0.5s;
+    }
+    .about-orb:hover {
+      box-shadow: 0 50px 100px -15px #1e2b5e, 0 0 0 1px rgba(130, 170, 255, 0.3) inset;
+    }
+
+    /* floating orbs (decor) */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(120, 180, 255, 0.4), rgba(80, 70, 230, 0.1));
+      filter: blur(50px);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .orb-1 {
+      width: 300px;
+      height: 300px;
+      top: -100px;
+      left: -100px;
+      background: radial-gradient(circle at 20% 30%, #5f4df0, #2d1b8a);
+      opacity: 0.25;
+    }
+    .orb-2 {
+      width: 400px;
+      height: 400px;
+      bottom: -150px;
+      right: -120px;
+      background: radial-gradient(circle at 70% 70%, #c05af0, #3f2b9b);
+      opacity: 0.2;
+    }
+
+    /* header section */
+    .premium-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+      z-index: 5;
+    }
+    .premium-header h1 {
+      font-size: 5rem;
+      font-weight: 800;
+      background: linear-gradient(145deg, #ffffff, #c5d0ff, #a9b8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      text-shadow: 0 0 30px rgba(70, 130, 255, 0.5);
+      margin-bottom: 0.8rem;
+      font-family: 'Outfit', sans-serif;
+    }
+    .premium-header .gold-line {
+      width: 150px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #7e9bff, #c084fc, #7e9bff, transparent);
+      margin: 1.2rem auto 1rem;
+      border-radius: 3px;
+    }
+    .premium-header .subhead {
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: #b5c8ff;
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(20, 25, 45, 0.5);
+      backdrop-filter: blur(10px);
+      padding: 0.8rem 2rem;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.05);
+      display: inline-block;
+      letter-spacing: 0.3px;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+
+    /* team title */
+    .team-title-modern {
+      text-align: center;
+      margin: 4rem 0 3rem;
+    }
+    .team-title-modern h2 {
+      font-size: 3.2rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #f0f3ff, #c2ceff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+      letter-spacing: -0.01em;
+      position: relative;
+    }
+    .team-title-modern h2 span {
+      background: rgba(95, 100, 255, 0.2);
+      padding: 0.2rem 1.2rem;
+      border-radius: 120px;
+      font-size: 1rem;
+      font-weight: 300;
+      color: #aab9ff;
+      margin-left: 1rem;
+      border: 1px solid rgba(150,170,255,0.2);
+      vertical-align: middle;
+    }
+
+    /* profile grid */
+    .grid-3d {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.2rem;
+      perspective: 1200px;
+      margin-top: 2rem;
+    }
+
+    /* ----- 3D TILT CARDS (ultra premium) ----- */
+    .tilt-card {
+      transform-style: preserve-3d;
+      background: rgba(20, 25, 45, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 2.8rem;
+      padding: 2.8rem 1.8rem 2.2rem;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      box-shadow: 0 30px 40px -20px black, 0 0 0 1px rgba(170, 200, 255, 0.1) inset;
+      transition: all 0.2s;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      will-change: transform;
+      transform: translateZ(0); /* force layer */
+    }
+
+    /* gradient border animation on hover */
+    .tilt-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 2.8rem;
+      padding: 2px;
+      background: radial-gradient(circle at 30% 30%, rgba(180, 190, 255, 0.6), rgba(130, 100, 255, 0.2) 70%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .tilt-card:hover::after {
+      opacity: 1;
+    }
+
+    /* avatar with glow */
+    .avatar-luminary {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 1.8rem;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid rgba(255,255,255,0.15);
+      box-shadow: 0 25px 40px -12px #000, 0 0 0 1px rgba(200, 210, 255, 0.3), 0 0 30px rgba(100, 150, 255, 0.3);
+      transition: all 0.4s;
+      transform: translateZ(30px) scale(1.02);
+    }
+    .tilt-card:hover .avatar-luminary {
+      border-color: #9bb3ff;
+      box-shadow: 0 30px 50px -10px #3045b0, 0 0 30px #6080ff;
+    }
+    .avatar-luminary img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(15%) contrast(1.05);
+      transition: filter 0.3s;
+    }
+    .tilt-card:hover .avatar-luminary img {
+      filter: grayscale(0) contrast(1.1);
+    }
+
+    /* name & role */
+    .tilt-card h3 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.3rem;
+      letter-spacing: -0.02em;
+      transform: translateZ(25px);
+      text-shadow: 0 2px 10px rgba(70,140,255,0.3);
+    }
+    .tilt-card .role-badge {
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #b5cdff;
+      background: linear-gradient(145deg, #1f274a, #151d3a);
+      display: inline-block;
+      padding: 0.35rem 1.5rem;
+      border-radius: 60px;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transform: translateZ(20px);
+    }
+
+    /* bio */
+    .tilt-card .bio-modern {
+      font-size: 1.1rem;
+      color: #cbd5ff;
+      font-weight: 300;
+      line-height: 1.7;
+      margin-bottom: 2.2rem;
+      flex-grow: 1;
+      transform: translateZ(15px);
+      padding: 0 0.3rem;
+    }
+
+    /* social icons with 3D depth */
+    .social-3d {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      border-top: 1px solid rgba(255,255,255,0.03);
+      padding-top: 1.8rem;
+      margin-top: auto;
+      transform: translateZ(30px);
+    }
+    .social-3d a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      background: rgba(10, 15, 30, 0.7);
+      backdrop-filter: blur(5px);
+      border-radius: 50%;
+      color: #dbebff;
+      font-size: 1.5rem;
+      box-shadow: 0 10px 18px -8px black, 0 0 0 1px rgba(255,255,255,0.03);
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+      border: 1px solid rgba(255,255,255,0.02);
+      text-decoration: none;
+      position: relative;
+    }
+    .social-3d a:hover {
+      background: #3f51e8;
+      color: white;
+      transform: translateY(-6px) scale(1.15);
+      box-shadow: 0 20px 25px -8px #1f45c0, 0 0 15px #3f6aff;
+      border-color: rgba(255,255,255,0.3);
+    }
+
+    /* responsive */
+    @media (max-width: 950px) {
+      .grid-3d {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .premium-header h1 {
+        font-size: 3.8rem;
+      }
+    }
+    @media (max-width: 650px) {
+      .grid-3d {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .about-orb {
+        padding: 2.2rem 1.5rem;
+        border-radius: 2.5rem;
+      }
+      .premium-header h1 {
+        font-size: 3rem;
+      }
+      .team-title-modern h2 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- canvas for particle background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- floating orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <div class="about-orb">
+    <!-- header -->
+    <div class="premium-header">
+      <h1>the luminaries</h1>
+      <div class="gold-line"></div>
+      <div class="subhead">where vision meets craft</div>
+    </div>
+
+    <!-- short quote -->
+    <div style="text-align: center; max-width: 650px; margin: 0 auto; background: rgba(0,0,0,0.2); padding: 1rem 2rem; border-radius: 80px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.02); color: #b7cbff; font-weight: 200; letter-spacing: 0.3px;">
+      <i class="fas fa-sparkle" style="color: #6c8cff; margin-right: 8px;"></i> 
+      three minds, one relentless pursuit of excellence 
+      <i class="fas fa-sparkle" style="color: #6c8cff; margin-left: 8px;"></i>
+    </div>
+
+    <!-- team modern title -->
+    <div class="team-title-modern">
+      <h2>core <span>✦ 2026 ✦</span></h2>
+    </div>
+
+    <!-- 3D tilt grid with three profiles -->
+    <div class="grid-3d" id="tilt-grid">
+      <!-- profile 1 - Maya -->
+      <div class="tilt-card" data-tilt data-tilt-max="9" data-tilt-glare="true" data-tilt-scale="1.02" data-tilt-speed="300" data-tilt-easing="cubic-bezier(.03,.98,.52,.99)">
+        <div class="avatar-luminary">
+          <img src="https://i.pravatar.cc/400?u=105" alt="Maya Patel">
+        </div>
+        <h3>Maya Patel</h3>
+        <span class="role-badge">FOUNDER & CHIEF VISIONER</span>
+        <p class="bio-modern">Ex-architect turned entrepreneur. Designs systems that breathe. Featured in Forbes 30u30.</p>
+        <div class="social-3d">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+        </div>
+      </div>
+
+      <!-- profile 2 - Elias -->
+      <div class="tilt-card" data-tilt data-tilt-max="9" data-tilt-glare="true" data-tilt-scale="1.02" data-tilt-speed="300">
+        <div class="avatar-luminary">
+          <img src="https://i.pravatar.cc/400?u=210" alt="Elias Chen">
+        </div>
+        <h3>Elias Chen</h3>
+        <span class="role-badge">CREATIVE DIRECTOR</span>
+        <p class="bio-modern">Multisensory storyteller. Work at MoMA, LACMA. Blends physical with digital.</p>
+        <div class="social-3d">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- profile 3 - Sophia -->
+      <div class="tilt-card" data-tilt data-tilt-max="9" data-tilt-glare="true" data-tilt-scale="1.02" data-tilt-speed="300">
+        <div class="avatar-luminary">
+          <img src="https://i.pravatar.cc/400?u=315" alt="Sophia Rivera">
+        </div>
+        <h3>Sophia Rivera</h3>
+        <span class="role-badge">LEAD AI ENGINEER</span>
+        <p class="bio-modern">Quantum computing nerd. Ex‑DeepMind. Builds intelligence with soul.</p>
+        <div class="social-3d">
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="Stack Overflow"><i class="fab fa-stack-overflow"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer micro -->
+    <div style="margin-top: 4rem; text-align: center; font-size: 0.95rem; color: #6270a4; font-weight: 300; border-top: 1px dashed rgba(255,255,255,0.02); padding-top: 2rem; letter-spacing: 1px;">
+      ✦  infinite iterations, one constant — quality  ✦
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      // 1) VANILLA TILT INIT (for cards)
+      if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+          max: 9,
+          speed: 300,
+          glare: true,
+          "max-glare": 0.5,
+          scale: 1.02,
+          easing: "cubic-bezier(.03,.98,.52,.99)",
+          perspective: 1200,
+        });
+      }
+
+      // 2) PARTICLES BACKGROUND (ultra premium feel)
+      const canvas = document.getElementById('particle-canvas');
+      const ctx = canvas.getContext('2d');
+      let width, height;
+      let particles = [];
+
+      function initParticles() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+        
+        const particleCount = 130;
+        particles = [];
+        for (let i = 0; i < particleCount; i++) {
+          particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            radius: Math.random() * 1.5 + 0.8,
+            speedX: (Math.random() - 0.5) * 0.2,
+            speedY: (Math.random() - 0.5) * 0.15,
+            opacity: Math.random() * 0.3 + 0.1,
+            color: `rgba(160, 190, 255, ${Math.random() * 0.3 + 0.2})`
+          });
+        }
+      }
+
+      function drawParticles() {
+        ctx.clearRect(0, 0, width, height);
+        particles.forEach(p => {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fillStyle = p.color;
+          ctx.shadowColor = '#6080ff';
+          ctx.shadowBlur = 8;
+          ctx.fill();
+          
+          // move
+          p.x += p.speedX;
+          p.y += p.speedY;
+          
+          // wrap around (soft)
+          if (p.x < 0) p.x = width;
+          if (p.x > width) p.x = 0;
+          if (p.y < 0) p.y = height;
+          if (p.y > height) p.y = 0;
+        });
+        requestAnimationFrame(drawParticles);
+      }
+
+      window.addEventListener('resize', () => {
+        initParticles();
+      });
+
+      initParticles();
+      drawParticles();
+
+      // small tilt reload for safety (if new cards added dynamically – none)
+      if (typeof VanillaTilt !== 'undefined') {
+        // rebind if needed (already bound above)
+      }
+    })();
+  </script>
+  <!-- ensure VanillaTilt loaded before init -->
+  <script>
+    // fallback if script loaded async, but it's synchronous.
+  </script>
+</body>
+</html>
